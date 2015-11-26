@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ecoknowledge</title>
+
+    <!-- libs -->
+    <link rel="stylesheet" href="assets/libs/bootstrap.min.css">
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-route.min.js"></script>
+    <script src="assets/libs/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/badge.css">
+
+    <!-- modules -->
+    <script src="app/app.module.js"></script>
+    <script src="app/shared/navbar/navbar.mdl.js"></script>
+    <script src="app/components/home/home.mdl.js"></script>
+    <script src="app/components/challenges/challenges.mdl.js"></script>
+    <script src="app/components/users/users.mdl.js"></script>
+    <script src="app/components/myProfile/myProfile.mdl.js"></script>
+
+    <!-- controllers -->
+    <script src="app/shared/navbar/navbar.ctrl.js"></script>
+    <script src="app/components/home/home.ctrl.js"></script>
+    <script src="app/components/challenges/challenges.ctrl.js"></script>
+    <script src="app/components/users/users.ctrl.js"></script>
+    <script src="app/components/myProfile/myProfile.ctrl.js"></script>
+
+    <!-- directives -->
+    <script src="app/shared/challenge/challenge.dir.js"></script>
+
+    <!-- responsivity -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="ecoknowledgeApp">
+
+<!-- navbar -->
+<ng-include src="'app/shared/navbar/navbar.view.html'"></ng-include>
+
+<!-- content -->
+<div ng-view class="content"></div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+.badge-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.badge-glyphicon {
+    position: absolute;
+    top: 0px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #fff;
+    right: 10px;
+    font-size: 6em;
+    color: green
+}
+
+.badge-img {
+    border: 5px solid dimgray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
+    box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
+}
+
+.badge-margin-top {
+    margin-top: 10px
+}
+
+.badge-no-margin-bot {
+    margin-bottom: 0px
+}
+
+.badge-padding {
+    padding: 10px;
+}
+
+.badge-title {
+    margin-bottom: 0;
+    margin-top: 0px
+}
