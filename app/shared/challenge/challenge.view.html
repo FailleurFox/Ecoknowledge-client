@@ -1,16 +1,16 @@
-<div class="col-xs-6 col-sm-4 col-lg-2 badge-container">
-    <!-- top-right icon -->
-    <div ng-show="challenge.levelAcquired"><span class="glyphicon glyphicon-ok badge-glyphicon"></span></div>
-    <!-- image -->
-    <img class="img-responsive img-circle badge-img" ng-src="{{challenge.image}}"/>
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 badge-container">
     <!-- panel -->
-    <div class="panel panel-default badge-margin-top">
+    <div class="panel panel-default badge-panel">
         <div class="panel-body badge-padding">
+            <!-- top-right icon -->
+            <div ng-show="challenge.levelAcquired"><span class="glyphicon glyphicon-ok badge-glyphicon"></span></div>
+            <!-- image -->
+            <img class="img-responsive img-circle badge-img" ng-src="{{challenge.image}}"/>
             <!-- title -->
-            <h4 class="badge-title">{{challenge.name}}</h4>
+            <h4 class="badge-title truncate">{{challenge.name}}</h4>
             <!-- subtitle -->
             <div ng-show="challenge.levelAcquired">
-                <p class="badge-no-margin-bot">
+                <p class="badge-no-margin-bot truncate">
                     {{challenge.levels[challenge.levelAcquired-1].name}}
                     ({{challenge.levelAcquired}}/{{challenge.levels.length}})
                 </p>
@@ -20,7 +20,7 @@
                 <div class="progress badge-margin-top badge-no-margin-bot">
                     <div class="progress-bar progress-bar-info" role="progressbar"
                          aria-valuemin="0" aria-valuemax="100" ng-style="{width : challenge.timePercent+'%'}">
-                        <span class="glyphicon glyphicon-time"></span> {{challenge.timePercent}}%
+                        <span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="progress badge-margin-top badge-no-margin-bot">
                     <div class="progress-bar progress-bar-success" role="progressbar"
                          aria-valuemin="0" aria-valuemax="100" ng-style="{width : challenge.progressPercent+'%'}">
-                        <span class="glyphicon glyphicon-tasks"></span> {{challenge.progressPercent}}%
+                        <span class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
                     </div>
                 </div>
             </div>
@@ -37,5 +37,9 @@
                 <button type="button" class="btn btn-primary badge-margin-top" ng-click="takeUpChallenge()">Relever</button>
             </div>
         </div>
+
+        <!--<div class="panel-footer" style="position: absolute; bottom: 0px; left:15px; right:15px">
+            Plus...
+        </div>-->
     </div>
 </div>

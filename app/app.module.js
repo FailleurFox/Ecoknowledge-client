@@ -4,7 +4,7 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
     'homeMdl',
     'challengesMdl',
     'usersMdl',
-    'myProfileMdl'
+    'profileMdl'
 ]);
 
 ecoknowledgeApp.config(
@@ -19,8 +19,11 @@ ecoknowledgeApp.config(
             when('/users', {
                 templateUrl: 'app/components/users/users.view.html',
             }).
-            when('/myProfile', {
-                templateUrl: 'app/components/myProfile/myProfile.view.html',
+            when('/profile/:profileId', {
+                templateUrl: 'app/components/profile/profile.view.html',
+            }).
+            when('/profile', {
+                redirectTo: '/profile/0', // TODO id current user
             }).
             otherwise({
                 redirectTo: '/home'
