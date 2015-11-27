@@ -1,3 +1,13 @@
-<div ng-controller="profileCtrl">
-    Profile #{{userId}}
+<div ng-controller="profileCtrl" class="padding">
+    <row>
+        <div class="panel panel-default col-xs-12 col-centered padding" style="margin-bottom:15px">
+            <!-- image -->
+            <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-lg"
+                 ng-src="{{user.profilePic}}"/>
+            <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-lg"
+                 src="assets/img/user-default.png"/>
+            <!-- name -->
+            <h3 class="truncate">{{user.firstName}} {{user.lastName}}</h3>
+        </div>
+    </row>
 </div>

@@ -1,3 +1,53 @@
-<div ng-controller="homeCtrl">
-    {{message}}
+<div ng-controller="homeCtrl" class="padding">
+    <row>
+        <div ng-show="!userId" class="panel panel-default col-sm-10 col-md-8 col-lg-6 col-centered padding" style="margin-bottom:15px">
+            <ng-include src="'app/shared/authentication/authentication.view.html'"></ng-include>
+        </div>
+    </row>
+    <row>
+        <div class="panel panel-default col-sm-10 col-md-8 col-lg-6 col-centered padding">
+            <h1 style="margin-bottom: 20px; margin-top:5px">&Agrave; propos</h1>
+            <!-- TODO description -->
+            <p>Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus
+                mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec
+                vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans,
+                suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.</p>
+
+            <p>Iamque lituis cladium concrepantibus internarum non celate ut antea turbidum saeviebat ingenium a veri
+                consideratione detortum et nullo inpositorum vel conpositorum fidem sollemniter inquirente nec
+                discernente a societate noxiorum insontes velut exturbatum e iudiciis fas omne discessit, et causarum
+                legitima silente defensione carnifex rapinarum sequester et obductio capitum et bonorum ubique multatio
+                versabatur per orientales provincias, quas recensere puto nunc oportunum absque Mesopotamia digesta, cum
+                bella Parthica dicerentur, et Aegypto, quam necessario aliud reieci ad tempus.</p>
+
+            <p>Vbi curarum abiectis ponderibus aliis tamquam nodum et codicem difficillimum Caesarem convellere nisu
+                valido cogitabat, eique deliberanti cum proximis clandestinis conloquiis et nocturnis qua vi, quibusve
+                commentis id fieret, antequam effundendis rebus pertinacius incumberet confidentia, acciri mollioribus
+                scriptis per simulationem tractatus publici nimis urgentis eundem placuerat Gallum, ut auxilio
+                destitutus sine ullo interiret obstaculo.</p>
+
+            <p>Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia
+                porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam
+                Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure
+                teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>
+
+            <p>Vita est illis semper in fuga uxoresque mercenariae conductae ad tempus ex pacto atque, ut sit species
+                matrimonii, dotis nomine futura coniunx hastam et tabernaculum offert marito, post statum diem si id
+                elegerit discessura, et incredibile est quo ardore apud eos in venerem uterque solvitur sexus.</p>
+
+            <h3 style="margin-bottom: 20px">D&eacute;veloppeurs</h3>
+
+            <div style="display:flex">
+                <div ng-repeat="user in developers" style="flex:1">
+                    <!-- image -->
+                    <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-sm"
+                         ng-src="{{user.profilePic}}"/>
+                    <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-sm"
+                         src="assets/img/user-default.png"/>
+                    <!-- name -->
+                    <h4 style="text-align:center">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
+                </div>
+            </div>
+        </div>
+    </row>
 </div>

@@ -15,7 +15,8 @@
             <li ng-class="{active: 2 == selected}"><a ng-href="#users" ng-click="selected = 2">Utilisateurs</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li ng-class="{active: 3 == selected}"><a ng-href="#profile" ng-click="selected = 3">Mon profil</a></li>
+            <li ng-show="userId" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{userId}}" ng-click="selected = 3">Mon profil</a></li>
+            <li ng-show="!userId" ng-class="{active: 3 == selected}"><a ng-href="#home" ng-click="selected = 0">Se connecter</a></li>
         </ul>
     </div>
 </nav>

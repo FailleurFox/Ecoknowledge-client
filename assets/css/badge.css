@@ -16,8 +16,8 @@
 
 .badge-img {
     max-height: 128px;
-    height:auto;
-    border: 5px solid gray;
+    height: auto;
+    border: 5px solid skyblue;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -29,9 +29,9 @@
     box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
 }
 
-.badge-panel{
-    height:300px;
-    margin:0px
+.badge-panel {
+    height: 300px;
+    margin: 0px
 }
 
 .badge-margin-top {
@@ -47,6 +47,19 @@
 }
 
 .badge-title {
+    font-weight: bold;
     margin-bottom: 0;
     margin-top: 10px
+}
+
+.badge-bot-left {
+    position: absolute;
+    bottom: 10px;
+    left: 25px
+}
+
+.badge-bot-right {
+    position: absolute;
+    bottom: 10px;
+    right: 25px
 }

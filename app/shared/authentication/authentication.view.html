@@ -1,0 +1,31 @@
+<form accept-charset="UTF-8" role="form" method="post" ng-submit="onSubmit()" ng-controller="authenticationCtrl">
+    <h4 class="">
+        Connexion
+    </h4>
+    <fieldset>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            @
+          </span>
+            <input class="form-control" placeholder="Email" ng-model="mail" type="email" required="">
+        </div>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-lock">
+            </i>
+          </span>
+            <input class="form-control" placeholder="Mot de passe" ng-model="password" type="password" value=""
+                   required="">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+                Se connecter
+            </button>
+            <p class="help-block">
+                <a class="pull-left text-muted" ng-href="#"> <!-- TODO -->
+                    <small>S'inscrire</small>
+                </a>
+            </p>
+        </div>
+    </fieldset>
+</form>

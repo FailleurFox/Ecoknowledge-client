@@ -4,9 +4,11 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
     'homeMdl',
     'challengesMdl',
     'usersMdl',
-    'profileMdl'
+    'profileMdl',
+    'authenticationMdl'
 ]);
 
+// routing
 ecoknowledgeApp.config(
     function($routeProvider) {
         $routeProvider.
@@ -21,9 +23,6 @@ ecoknowledgeApp.config(
             }).
             when('/profile/:profileId', {
                 templateUrl: 'app/components/profile/profile.view.html',
-            }).
-            when('/profile', {
-                redirectTo: '/profile/0', // TODO id current user
             }).
             otherwise({
                 redirectTo: '/home'

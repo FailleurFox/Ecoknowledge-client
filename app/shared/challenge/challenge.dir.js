@@ -14,6 +14,9 @@ ecoknowledgeApp
                 scope.takeUpChallenge  = function () {
                     console.log("Challenge #"+scope.challenge.id+" accepted !");
                 };
+                scope.moreInfo  = function () {
+                    console.log("More #"+scope.challenge.id+"...");
+                };
             }
         };
     }]);

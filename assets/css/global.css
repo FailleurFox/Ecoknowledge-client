@@ -1,9 +1,12 @@
-html, body
-{
+html, body {
     height: 100%;
 }
 
-.content{
+body{
+    background-color:aliceblue;
+}
+
+.content {
     padding-top: 50px;
 }
 
@@ -11,4 +14,28 @@ html, body
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.padding {
+    padding: 15px;
+}
+
+.margin {
+    margin: 15px;
+}
+
+.panel-custom-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px
+}
+
+.margin-top{
+    margin-top:15px
 }
