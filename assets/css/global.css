@@ -29,13 +29,6 @@ body{
     margin: 15px;
 }
 
-.panel-custom-footer {
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
-    right: 15px
-}
-
 .margin-top{
     margin-top:15px
 }

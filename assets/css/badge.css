@@ -18,15 +18,12 @@
     max-height: 128px;
     height: auto;
     border: 5px solid skyblue;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
-    box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
+    box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
 }
 
 .badge-panel {

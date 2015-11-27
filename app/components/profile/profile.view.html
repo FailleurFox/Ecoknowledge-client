@@ -1,13 +1,24 @@
 <div ng-controller="profileCtrl" class="padding">
-    <row>
-        <div class="panel panel-default col-xs-12 col-centered padding" style="margin-bottom:15px">
+    <div class="panel panel-default row margin padding">
+        <div class="col-xs-12 col-sm-6 image-container">
             <!-- image -->
-            <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-lg"
+            <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-lg center-block"
                  ng-src="{{user.profilePic}}"/>
-            <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-lg"
+            <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-lg center-block"
                  src="assets/img/user-default.png"/>
-            <!-- name -->
-            <h3 class="truncate">{{user.firstName}} {{user.lastName}}</h3>
         </div>
-    </row>
+
+        <div class="col-xs-12 col-sm-6">
+            <!-- name -->
+            <h1>{{user.firstName}} {{user.lastName}}</h1>
+            <div class="btn-group">
+                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'completed'">D&eacute;fis r&eacute;ussis : {{challengesCompleted.length}}</label>
+                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">D&eacute;fis en cours : {{currentChallenges.length}}</label>
+            </div>
+        </div>
+    </div>
+
+    <challenge ng-show="selected=='completed'" ng-repeat="challenge in challengesCompleted" challenge="challenge"></challenge>
+
+    <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges" challenge="challenge"></challenge>
 </div>

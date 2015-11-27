@@ -1,4 +1,5 @@
 var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
+    'ui.bootstrap',
     'ngRoute',
     'navbarMdl',
     'homeMdl',
