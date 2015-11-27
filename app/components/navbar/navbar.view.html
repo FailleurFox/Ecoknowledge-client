@@ -6,18 +6,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ng-href="#home" ng-click="selected = 0">Ecoknowledge</a>
+        <a class="navbar-brand" ng-href="#home" ng-click="selected = 0; navCollapsed=true">Ecoknowledge</a>
     </div>
 
     <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
         <ul class="nav navbar-nav">
-            <li ng-class="{active: 1 == selected}"><a ng-href="#challenges" ng-click="selected = 1">D&eacutefis</a></li>
-            <li ng-class="{active: 2 == selected}"><a ng-href="#users" ng-click="selected = 2">Utilisateurs</a></li>
+            <li ng-class="{active: 1 == selected}"><a ng-href="#challenges" ng-click="selected = 1; navCollapsed=true">D&eacutefis</a></li>
+            <li ng-class="{active: 2 == selected}"><a ng-href="#users" ng-click="selected = 2; navCollapsed=true">Utilisateurs</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li ng-show="userId" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{userId}}" ng-click="selected = 3">Mon profil</a></li>
-            <li ng-show="!userId" class="pointer-hover"><a ng-click="onAuthClick()">Se connecter</a></li>
-            <li ng-show="userId" class="pointer-hover"><a ng-click="onDisconnectionClick()">Se d&eacute;connecter</a></li>
+            <li ng-show="userId" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{userId}}" ng-click="selected = 3; navCollapsed=true">Mon profil</a></li>
+            <li ng-show="!userId" class="pointer-hover"><a ng-click="onAuthClick(); navCollapsed=true">Se connecter</a></li>
+            <li ng-show="userId" class="pointer-hover"><a ng-click="onDisconnectionClick(); navCollapsed=true">Se d&eacute;connecter</a></li>
         </ul>
     </div>
 </nav>
