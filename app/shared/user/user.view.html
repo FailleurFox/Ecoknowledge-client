@@ -7,7 +7,8 @@
             <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block" ng-src="{{user.profilePic}}"/>
             <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block" src="assets/img/user-default.png"/>
             <!-- name -->
-            <h4 class="truncate">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
+            <h4 class="truncate user-name">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
+            <p class="truncate user-points">({{user.points}}pts)</p>
         </div>
     </div>
     </a>

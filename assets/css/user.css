@@ -42,3 +42,14 @@
 .user-padding {
     padding: 10px;
 }
+
+.user-name{
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.user-points{
+    margin-top:0;
+    margin-bottom: 0;
+    color: #333;
+}

@@ -16,7 +16,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li ng-show="userId" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{userId}}" ng-click="selected = 3">Mon profil</a></li>
-            <li ng-show="!userId" ng-class="{active: 3 == selected}"><a ng-href="#home" ng-click="selected = 0">Se connecter</a></li>
+            <li ng-show="!userId" class="pointer-hover"><a ng-click="onAuthClick()">Se connecter</a></li>
+            <li ng-show="userId" class="pointer-hover"><a ng-click="onDisconnectionClick()">Se d&eacute;connecter</a></li>
         </ul>
     </div>
 </nav>

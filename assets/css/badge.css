@@ -11,7 +11,8 @@
     -webkit-text-stroke-color: #fff;
     right: 10px;
     font-size: 5em;
-    color: green
+    color: green;
+    text-shadow: 0 0 5px black;
 }
 
 .badge-img {

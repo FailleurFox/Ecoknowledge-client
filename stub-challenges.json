@@ -1,401 +1,647 @@
-[{	
-	"id":123456,
-	"name":"Reine des neiges",
-	"image":"http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
-	"levels":[
-		{"name":"Sven",
-		"conditions":[
-			{"condition" : "condition1"},
-			{"condition" : "condition2"}]
-		},
-		{"name":"Elsa",
-		"conditions":[
-			{"condition" : "condition1"},
-			{"condition" : "condition2"}]
-		}]
-},
-{	
-	"id":456789,
-	"name":"FailerFox",
-	"image":"http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
-	"levelAcquired":1,
-	"levels":[
-		{"name":"Expert de l'echec",
-		"conditions":[
-			{"condition" : "condition1"},
-			{"condition" : "condition2"}]
-		}]
-},
+[
   {
-	"id":789123,
-	"name":"Magmar",
-	"image":"http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
-	"timePercent":20,
-	"progressPercent":55,
-	"levels":[
-	  {"name":"Niveau 1",
-		"percent":50,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 40},
-		  {"condition" : "condition2",
-			"percent" : 60}]
-	  },
-	  {"name":"Niveau 2",
-		"percent":40,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 30},
-		  {"condition" : "condition2",
-			"percent" : 50}]
-	  },
-	  {"name":"Niveau 3",
-		"percent":30,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 20},
-		  {"condition" : "condition2",
-			"percent" : 40}]
-	  }]
+    "id": 123456,
+    "name": "Reine des neiges",
+    "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
+    "levels": [
+      {
+        "name": "Sven",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      },
+      {
+        "name": "Elsa",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789456,
-	"name":"Nyctalope",
-	"image":"http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
-	"timePercent":80,
-	"progressPercent":90,
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Chat",
-		"percent":100,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 100}]
-	  },
-	  {"name":"Tigre",
-		"percent":80,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 80}]
-	  }]
-  },{
-  "id":123456,
-  "name":"Reine des neiges",
-  "image":"http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
-  "levels":[
-	{"name":"Sven",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	},
-	{"name":"Elsa",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	}]
-},
-  {
-	"id":456789,
-	"name":"FailerFox",
-	"image":"http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Expert de l'echec",
-		"conditions":[
-		  {"condition" : "condition1"},
-		  {"condition" : "condition2"}]
-	  }]
+    "id": 456789,
+    "name": "FailerFox",
+    "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Expert de l'echec",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789123,
-	"name":"Magmar",
-	"image":"http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
-	"timePercent":20,
-	"progressPercent":55,
-	"levels":[
-	  {"name":"Niveau 1",
-		"percent":50,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 40},
-		  {"condition" : "condition2",
-			"percent" : 60}]
-	  },
-	  {"name":"Niveau 2",
-		"percent":40,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 30},
-		  {"condition" : "condition2",
-			"percent" : 50}]
-	  },
-	  {"name":"Niveau 3",
-		"percent":30,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 20},
-		  {"condition" : "condition2",
-			"percent" : 40}]
-	  }]
+    "id": 789123,
+    "name": "Magmar",
+    "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
+    "timePercent": 20,
+    "progressPercent": 55,
+    "levels": [
+      {
+        "name": "Niveau 1",
+        "percent": 50,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 40
+          },
+          {
+            "condition": "condition2",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Niveau 2",
+        "percent": 40,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 30
+          },
+          {
+            "condition": "condition2",
+            "percent": 50
+          }
+        ]
+      },
+      {
+        "name": "Niveau 3",
+        "percent": 30,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 20
+          },
+          {
+            "condition": "condition2",
+            "percent": 40
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789456,
-	"name":"Nyctalope",
-	"image":"http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
-	"timePercent":80,
-	"progressPercent":90,
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Chat",
-		"percent":100,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 100}]
-	  },
-	  {"name":"Tigre",
-		"percent":80,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 80}]
-	  }]
-  },{
-  "id":123456,
-  "name":"Reine des neiges",
-  "image":"http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
-  "levels":[
-	{"name":"Sven",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	},
-	{"name":"Elsa",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	}]
-},
-  {
-	"id":456789,
-	"name":"FailerFox",
-	"image":"http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Expert de l'echec",
-		"conditions":[
-		  {"condition" : "condition1"},
-		  {"condition" : "condition2"}]
-	  }]
+    "id": 789456,
+    "name": "Nyctalope",
+    "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
+    "timePercent": 80,
+    "progressPercent": 90,
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Chat",
+        "percent": 100,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 100
+          }
+        ]
+      },
+      {
+        "name": "Tigre",
+        "percent": 80,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 80
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789123,
-	"name":"Magmar",
-	"image":"http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
-	"timePercent":20,
-	"progressPercent":55,
-	"levels":[
-	  {"name":"Niveau 1",
-		"percent":50,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 40},
-		  {"condition" : "condition2",
-			"percent" : 60}]
-	  },
-	  {"name":"Niveau 2",
-		"percent":40,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 30},
-		  {"condition" : "condition2",
-			"percent" : 50}]
-	  },
-	  {"name":"Niveau 3",
-		"percent":30,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 20},
-		  {"condition" : "condition2",
-			"percent" : 40}]
-	  }]
+    "id": 123456,
+    "name": "Reine des neiges",
+    "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
+    "levels": [
+      {
+        "name": "Sven",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      },
+      {
+        "name": "Elsa",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789456,
-	"name":"Nyctalope",
-	"image":"http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
-	"timePercent":80,
-	"progressPercent":90,
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Chat",
-		"percent":100,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 100}]
-	  },
-	  {"name":"Tigre",
-		"percent":80,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 80}]
-	  }]
-  },{
-  "id":123456,
-  "name":"Reine des neiges",
-  "image":"http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
-  "levels":[
-	{"name":"Sven",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	},
-	{"name":"Elsa",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	}]
-},
-  {
-	"id":456789,
-	"name":"FailerFox",
-	"image":"http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Expert de l'echec",
-		"conditions":[
-		  {"condition" : "condition1"},
-		  {"condition" : "condition2"}]
-	  }]
+    "id": 456789,
+    "name": "FailerFox",
+    "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Expert de l'echec",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789123,
-	"name":"Magmar",
-	"image":"http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
-	"timePercent":20,
-	"progressPercent":55,
-	"levels":[
-	  {"name":"Niveau 1",
-		"percent":50,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 40},
-		  {"condition" : "condition2",
-			"percent" : 60}]
-	  },
-	  {"name":"Niveau 2",
-		"percent":40,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 30},
-		  {"condition" : "condition2",
-			"percent" : 50}]
-	  },
-	  {"name":"Niveau 3",
-		"percent":30,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 20},
-		  {"condition" : "condition2",
-			"percent" : 40}]
-	  }]
+    "id": 789123,
+    "name": "Magmar",
+    "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
+    "timePercent": 20,
+    "progressPercent": 55,
+    "levels": [
+      {
+        "name": "Niveau 1",
+        "percent": 50,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 40
+          },
+          {
+            "condition": "condition2",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Niveau 2",
+        "percent": 40,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 30
+          },
+          {
+            "condition": "condition2",
+            "percent": 50
+          }
+        ]
+      },
+      {
+        "name": "Niveau 3",
+        "percent": 30,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 20
+          },
+          {
+            "condition": "condition2",
+            "percent": 40
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789456,
-	"name":"Nyctalope",
-	"image":"http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
-	"timePercent":80,
-	"progressPercent":90,
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Chat",
-		"percent":100,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 100}]
-	  },
-	  {"name":"Tigre",
-		"percent":80,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 80}]
-	  }]
-  },{
-  "id":123456,
-  "name":"Reine des neiges",
-  "image":"http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
-  "levels":[
-	{"name":"Sven",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	},
-	{"name":"Elsa",
-	  "conditions":[
-		{"condition" : "condition1"},
-		{"condition" : "condition2"}]
-	}]
-},
-  {
-	"id":456789,
-	"name":"FailerFox",
-	"image":"http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Expert de l'echec",
-		"conditions":[
-		  {"condition" : "condition1"},
-		  {"condition" : "condition2"}]
-	  }]
+    "id": 789456,
+    "name": "Nyctalope",
+    "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
+    "timePercent": 80,
+    "progressPercent": 90,
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Chat",
+        "percent": 100,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 100
+          }
+        ]
+      },
+      {
+        "name": "Tigre",
+        "percent": 80,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 80
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789123,
-	"name":"Magmar",
-	"image":"http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
-	"timePercent":20,
-	"progressPercent":55,
-	"levels":[
-	  {"name":"Niveau 1",
-		"percent":50,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 40},
-		  {"condition" : "condition2",
-			"percent" : 60}]
-	  },
-	  {"name":"Niveau 2",
-		"percent":40,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 30},
-		  {"condition" : "condition2",
-			"percent" : 50}]
-	  },
-	  {"name":"Niveau 3",
-		"percent":30,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 20},
-		  {"condition" : "condition2",
-			"percent" : 40}]
-	  }]
+    "id": 123456,
+    "name": "Reine des neiges",
+    "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
+    "levels": [
+      {
+        "name": "Sven",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      },
+      {
+        "name": "Elsa",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
   },
   {
-	"id":789456,
-	"name":"Nyctalope",
-	"image":"http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
-	"timePercent":80,
-	"progressPercent":90,
-	"levelAcquired":1,
-	"levels":[
-	  {"name":"Chat",
-		"percent":100,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 100}]
-	  },
-	  {"name":"Tigre",
-		"percent":80,
-		"conditions":[
-		  {"condition" : "condition1",
-			"percent" : 80}]
-	  }]
-  }]
+    "id": 456789,
+    "name": "FailerFox",
+    "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Expert de l'echec",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789123,
+    "name": "Magmar",
+    "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
+    "timePercent": 20,
+    "progressPercent": 55,
+    "levels": [
+      {
+        "name": "Niveau 1",
+        "percent": 50,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 40
+          },
+          {
+            "condition": "condition2",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Niveau 2",
+        "percent": 40,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 30
+          },
+          {
+            "condition": "condition2",
+            "percent": 50
+          }
+        ]
+      },
+      {
+        "name": "Niveau 3",
+        "percent": 30,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 20
+          },
+          {
+            "condition": "condition2",
+            "percent": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789456,
+    "name": "Nyctalope",
+    "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
+    "timePercent": 80,
+    "progressPercent": 90,
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Chat",
+        "percent": 100,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 100
+          }
+        ]
+      },
+      {
+        "name": "Tigre",
+        "percent": 80,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123456,
+    "name": "Reine des neiges",
+    "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
+    "levels": [
+      {
+        "name": "Sven",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      },
+      {
+        "name": "Elsa",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 456789,
+    "name": "FailerFox",
+    "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Expert de l'echec",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789123,
+    "name": "Magmar",
+    "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
+    "timePercent": 20,
+    "progressPercent": 55,
+    "levels": [
+      {
+        "name": "Niveau 1",
+        "percent": 50,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 40
+          },
+          {
+            "condition": "condition2",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Niveau 2",
+        "percent": 40,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 30
+          },
+          {
+            "condition": "condition2",
+            "percent": 50
+          }
+        ]
+      },
+      {
+        "name": "Niveau 3",
+        "percent": 30,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 20
+          },
+          {
+            "condition": "condition2",
+            "percent": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789456,
+    "name": "Nyctalope",
+    "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
+    "timePercent": 80,
+    "progressPercent": 90,
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Chat",
+        "percent": 100,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 100
+          }
+        ]
+      },
+      {
+        "name": "Tigre",
+        "percent": 80,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123456,
+    "name": "Reine des neiges",
+    "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
+    "levels": [
+      {
+        "name": "Sven",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      },
+      {
+        "name": "Elsa",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 456789,
+    "name": "FailerFox",
+    "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Expert de l'echec",
+        "conditions": [
+          {
+            "condition": "condition1"
+          },
+          {
+            "condition": "condition2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789123,
+    "name": "Magmar",
+    "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
+    "timePercent": 20,
+    "progressPercent": 55,
+    "levels": [
+      {
+        "name": "Niveau 1",
+        "percent": 50,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 40
+          },
+          {
+            "condition": "condition2",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Niveau 2",
+        "percent": 40,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 30
+          },
+          {
+            "condition": "condition2",
+            "percent": 50
+          }
+        ]
+      },
+      {
+        "name": "Niveau 3",
+        "percent": 30,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 20
+          },
+          {
+            "condition": "condition2",
+            "percent": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 789456,
+    "name": "Nyctalope",
+    "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
+    "timePercent": 80,
+    "progressPercent": 90,
+    "levelAcquired": 1,
+    "levels": [
+      {
+        "name": "Chat",
+        "percent": 100,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 100
+          }
+        ]
+      },
+      {
+        "name": "Tigre",
+        "percent": 80,
+        "conditions": [
+          {
+            "condition": "condition1",
+            "percent": 80
+          }
+        ]
+      }
+    ]
+  }
+]
