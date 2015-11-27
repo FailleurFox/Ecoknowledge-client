@@ -6,6 +6,12 @@ body{
     background-color:aliceblue;
 }
 
+.navbar {
+    -webkit-box-shadow: 0 0px 5px 0px #999;
+    -moz-box-shadow: 0 0px 5px 0px #999;
+    box-shadow: 0 0px 5px 0px #999;
+}
+
 .content {
     padding-top: 50px;
 }

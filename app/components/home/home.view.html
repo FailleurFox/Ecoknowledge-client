@@ -1,8 +1,20 @@
 <div ng-controller="homeCtrl" class="padding">
     <row ng-show="!userId">
-        <div class="panel panel-default col-sm-10 col-md-8 col-lg-6 col-centered padding"
-             style="margin-bottom:15px">
-            <ng-include src="'app/shared/authentication/authentication.view.html'"></ng-include>
+        <div class="panel panel-default col-sm-10 col-md-8 col-lg-6 col-centered"
+             style="margin-bottom:15px;border-style: dashed">
+            <div class="row">
+                <div class="padding col-md-5">
+                    <ng-include src="'app/shared/authentication/authentication.view.html'"></ng-include>
+                </div>
+                <div class="padding col-md-2">
+                <h4 style="text-align: center">
+                    OU
+                </h4>
+                    </div>
+                <div class="padding col-md-5">
+                    <ng-include src="'app/shared/registration/registration.view.html'"></ng-include>
+                </div>
+            </div>
         </div>
     </row>
     <row>

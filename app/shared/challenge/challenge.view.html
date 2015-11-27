@@ -9,17 +9,17 @@
             <!-- title -->
             <h4 class="badge-title truncate">{{challenge.name}}</h4>
             <!-- subtitle -->
-            <p ng-show="challenge.levelAcquired" class="badge-no-margin-bot truncate">
+            <p ng-show="challenge.levelAcquired" class="truncate" style="margin-bottom: 0">
                 {{challenge.levels[challenge.levelAcquired-1].name}}
                 ({{challenge.levelAcquired}}/{{challenge.levels.length}})
             </p>
             <!-- time bar -->
-            <uib-progressbar class="badge-margin-top badge-no-margin-bot" ng-show="challenge.timePercent" max="100"
+            <uib-progressbar class="badge-margin-top" style="margin-bottom: 0; margin-top:10px" ng-show="challenge.timePercent" max="100"
                              value="challenge.timePercent" type="info"><span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
             </uib-progressbar>
 
             <!-- progress bar -->
-            <uib-progressbar class="badge-margin-top badge-no-margin-bot" ng-show="challenge.progressPercent" max="100"
+            <uib-progressbar class="badge-margin-top" style="margin-bottom: 0; margin-top:10px" ng-show="challenge.progressPercent" max="100"
                              value="challenge.timePercent" type="success"><span
                     class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
             </uib-progressbar>
