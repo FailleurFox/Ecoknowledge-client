@@ -15,9 +15,9 @@
             <li ng-class="{active: 2 == selected}"><a ng-href="#users" ng-click="selected = 2; navCollapsed=true">Utilisateurs</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li ng-show="userId" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{userId}}" ng-click="selected = 3; navCollapsed=true">Mon profil</a></li>
-            <li ng-show="!userId" class="pointer-hover"><a ng-click="onAuthClick(); navCollapsed=true">Se connecter</a></li>
-            <li ng-show="userId" class="pointer-hover"><a ng-click="onDisconnectionClick(); navCollapsed=true">Se d&eacute;connecter</a></li>
+            <li ng-show="isLoggedIn()" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{getUserId()}}" ng-click="selected = 3; navCollapsed=true">Mon profil</a></li>
+            <li ng-show="!isLoggedIn()" class="pointer-hover"><a ng-click="onAuthClick(); navCollapsed=true">Se connecter</a></li>
+            <li ng-show="isLoggedIn()" class="pointer-hover"><a ng-click="onDisconnectionClick(); navCollapsed=true">Se d&eacute;connecter</a></li>
         </ul>
     </div>
 </nav>

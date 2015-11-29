@@ -5,6 +5,6 @@ authenticationMdl.controller('authenticationCtrl', function ($scope, Authenticat
     $scope.onSubmit = function(){
         // TODO call server
         console.log($scope.mail, $scope.password);
-        AuthenticationService.setUserId(123456);
+        AuthenticationService.connect(123456);
     }
 });

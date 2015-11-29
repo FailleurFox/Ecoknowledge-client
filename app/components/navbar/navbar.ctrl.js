@@ -2,6 +2,8 @@
  * Created by Hugo on 25/11/2015.
  */
 navbarMdl.controller('navbarCtrl', function ($scope, $uibModal, AuthenticationService) {
+    $scope.isLoggedIn = AuthenticationService.isLoggedIn;
+    $scope.getUserId = AuthenticationService.getUserId;
     $scope.selected=0;
 
     $scope.onAuthClick = function(){
@@ -13,6 +15,6 @@ navbarMdl.controller('navbarCtrl', function ($scope, $uibModal, AuthenticationSe
     };
 
     $scope.onDisconnectionClick = function(){
-        AuthenticationService.setUserId(undefined);
+        AuthenticationService.disconnect();
     };
 });
