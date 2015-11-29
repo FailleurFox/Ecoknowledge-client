@@ -1,7 +1,8 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Registration component controller
  */
 registrationMdl.controller('registrationCtrl', function ($scope, AuthenticationService) {
+    // submit registration information
     $scope.onSubmit = function(){
         // TODO call server
         console.log($scope.firstName, $scope.lastName, $scope.mail, $scope.password);

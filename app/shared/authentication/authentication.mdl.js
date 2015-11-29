@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Authentication module
  */
 var authenticationMdl = angular.module('authenticationMdl', []);

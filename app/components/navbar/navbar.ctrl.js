@@ -1,11 +1,13 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Navigation bar controller
  */
 navbarMdl.controller('navbarCtrl', function ($scope, $uibModal, AuthenticationService) {
     $scope.isLoggedIn = AuthenticationService.isLoggedIn;
     $scope.getUserId = AuthenticationService.getUserId;
+    // page selected
     $scope.selected=0;
 
+    // "Se connecter"
     $scope.onAuthClick = function(){
         $uibModal.open({
             animation: true,
@@ -14,6 +16,7 @@ navbarMdl.controller('navbarCtrl', function ($scope, $uibModal, AuthenticationSe
         });
     };
 
+    // "Se déconnecter"
     $scope.onDisconnectionClick = function(){
         AuthenticationService.disconnect();
     };

@@ -1,8 +1,9 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Home page controller
  */
 homeMdl.controller('homeCtrl', function ($scope, AuthenticationService) {
     $scope.isLoggedIn = AuthenticationService.isLoggedIn;
+    // fill the developers list
     $scope.developers =
         [
             {

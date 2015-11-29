@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Registration component module
  */
 var registrationMdl = angular.module('registrationMdl', []);

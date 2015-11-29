@@ -1,5 +1,5 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Authentication service
  */
 ecoknowledgeApp.factory('AuthenticationService', function(){
     var userId;

@@ -1,10 +1,12 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Profile page controller
  */
 profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     $scope.userId = $routeParams.profileId;
+    // challenges selected
     $scope.selected="completed";
 
+    // challenges by category
     $scope.challengesCompleted = [];
     $scope.currentChallenges = [];
 

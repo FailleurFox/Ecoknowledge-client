@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Home page module
  */
 var homeMdl = angular.module('homeMdl', []);

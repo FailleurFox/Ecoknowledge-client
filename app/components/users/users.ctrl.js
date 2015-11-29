@@ -1,5 +1,5 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Users page controller
  */
 usersMdl.controller('usersCtrl', function ($scope, $http) {
     // TODO call server

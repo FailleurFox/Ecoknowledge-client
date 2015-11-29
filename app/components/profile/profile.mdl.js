@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Profile page module
  */
 var profileMdl = angular.module('profileMdl', []);

@@ -1,5 +1,5 @@
 /**
- * Created by Hugo on 26/11/2015.
+ * <user> directive
  */
 ecoknowledgeApp
     .directive('user', [function () {

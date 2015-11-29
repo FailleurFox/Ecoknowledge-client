@@ -11,7 +11,9 @@
         <div class="col-xs-12 col-sm-6">
             <!-- name -->
             <h1 style="font-weight: bold">{{user.firstName}} {{user.lastName}}</h1>
+            <!-- points -->
             <h2 style="margin-top:10px; margin-bottom:20px">{{user.points}}pts</h2>
+            <!-- challenges category switch -->
             <div class="btn-group">
                 <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'completed'">D&eacute;fis r&eacute;ussis : {{challengesCompleted.length}}</label>
                 <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">D&eacute;fis en cours : {{currentChallenges.length}}</label>
@@ -19,7 +21,8 @@
         </div>
     </div>
 
+    <!-- completed challenges -->
     <challenge ng-show="selected=='completed'" ng-repeat="challenge in challengesCompleted" challenge="challenge"></challenge>
-
+    <!-- current challenges -->
     <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges" challenge="challenge"></challenge>
 </div>

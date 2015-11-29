@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Navigation bar module
  */
 var navbarMdl = angular.module('navbarMdl', []);

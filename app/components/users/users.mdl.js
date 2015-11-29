@@ -1,4 +1,4 @@
 /**
- * Created by Hugo on 25/11/2015.
+ * Users page module
  */
 var usersMdl = angular.module('usersMdl', []);
