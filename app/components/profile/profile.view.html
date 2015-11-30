@@ -17,6 +17,7 @@
             <div class="btn-group">
                 <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'completed'">D&eacute;fis r&eacute;ussis : {{challengesCompleted.length}}</label>
                 <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">D&eacute;fis en cours : {{currentChallenges.length}}</label>
+                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'all'">Tous : {{allChallenges.length}}</label>
             </div>
         </div>
     </div>
@@ -25,4 +26,6 @@
     <challenge ng-show="selected=='completed'" ng-repeat="challenge in challengesCompleted" challenge="challenge"></challenge>
     <!-- current challenges -->
     <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges" challenge="challenge"></challenge>
+    <!-- all challenges -->
+    <challenge ng-show="selected=='all'" ng-repeat="challenge in allChallenges" challenge="challenge"></challenge>
 </div>

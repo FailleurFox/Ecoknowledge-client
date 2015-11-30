@@ -1,6 +1,6 @@
 [
   {
-    "id": 123456,
+    "id": 1,
     "name": "Reine des neiges",
     "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
     "levels": [
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "id": 456789,
+    "id": 2,
     "name": "FailerFox",
     "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
     "levelAcquired": 1,
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "id": 789123,
+    "id": 3,
     "name": "Magmar",
     "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
     "timePercent": 20,
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "id": 789456,
+    "id": 4,
     "name": "Nyctalope",
     "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
     "timePercent": 80,
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "id": 123456,
+    "id": 5,
     "name": "Reine des neiges",
     "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
     "levels": [
@@ -158,7 +158,7 @@
     ]
   },
   {
-    "id": 456789,
+    "id": 6,
     "name": "FailerFox",
     "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
     "levelAcquired": 1,
@@ -177,7 +177,7 @@
     ]
   },
   {
-    "id": 789123,
+    "id": 7,
     "name": "Magmar",
     "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
     "timePercent": 20,
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "id": 789456,
+    "id": 8,
     "name": "Nyctalope",
     "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
     "timePercent": 80,
@@ -258,7 +258,7 @@
     ]
   },
   {
-    "id": 123456,
+    "id": 9,
     "name": "Reine des neiges",
     "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
     "levels": [
@@ -287,7 +287,7 @@
     ]
   },
   {
-    "id": 456789,
+    "id": 10,
     "name": "FailerFox",
     "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
     "levelAcquired": 1,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "id": 789123,
+    "id": 11,
     "name": "Magmar",
     "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
     "timePercent": 20,
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "id": 789456,
+    "id": 12,
     "name": "Nyctalope",
     "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
     "timePercent": 80,
@@ -387,7 +387,7 @@
     ]
   },
   {
-    "id": 123456,
+    "id": 13,
     "name": "Reine des neiges",
     "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
     "levels": [
@@ -416,7 +416,7 @@
     ]
   },
   {
-    "id": 456789,
+    "id": 14,
     "name": "FailerFox",
     "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
     "levelAcquired": 1,
@@ -435,7 +435,7 @@
     ]
   },
   {
-    "id": 789123,
+    "id": 15,
     "name": "Magmar",
     "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
     "timePercent": 20,
@@ -486,7 +486,7 @@
     ]
   },
   {
-    "id": 789456,
+    "id": 16,
     "name": "Nyctalope",
     "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
     "timePercent": 80,
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "id": 123456,
+    "id": 17,
     "name": "Reine des neiges",
     "image": "http://www.glamour.com/images/entertainment/2014/06/elsa-frozen-square-w352.jpg",
     "levels": [
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "id": 456789,
+    "id": 18,
     "name": "FailerFox",
     "image": "http://media.steampowered.com/steamcommunity/public/images/avatars/b3/b3a88d804414663378bfd9c2b9a4f1d6834831e0_full.jpg",
     "levelAcquired": 1,
@@ -564,7 +564,7 @@
     ]
   },
   {
-    "id": 789123,
+    "id": 19,
     "name": "Magmar",
     "image": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
     "timePercent": 20,
@@ -615,7 +615,7 @@
     ]
   },
   {
-    "id": 789456,
+    "id": 20,
     "name": "Nyctalope",
     "image": "http://orig07.deviantart.net/d9e2/f/2007/045/a/2/1500_px_cat_eye_by_hoschie_stock.jpg",
     "timePercent": 80,

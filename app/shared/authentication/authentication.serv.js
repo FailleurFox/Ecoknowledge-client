@@ -1,24 +1,23 @@
 /**
  * Authentication service
  */
-ecoknowledgeApp.factory('AuthenticationService', function(){
-    var userId;
+ecoknowledgeApp.factory('AuthenticationService', function($cookies){
 
     return{
         connect : function(id){
-            userId = id;
+            $cookies.put("EcoknowledgeUserId", id);
         },
 
         getUserId : function(){
-            return userId;
+            return $cookies.get("EcoknowledgeUserId");
         },
 
         isLoggedIn : function(){
-            return userId ? true : false;
+            return $cookies.get("EcoknowledgeUserId") ? true : false;
         },
 
         disconnect : function(){
-            userId = undefined;
+            $cookies.remove("EcoknowledgeUserId");
         }
     }
 })

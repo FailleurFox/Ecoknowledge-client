@@ -1,8 +1,8 @@
 /**
  * <user> directive
  */
-ecoknowledgeApp
-    .directive('user', [function () {
+userMdl
+    .directive('user', function () {
         return {
             templateUrl:'app/shared/user/user.view.html',
             restrict: 'E',
@@ -11,4 +11,4 @@ ecoknowledgeApp
                 user: '=user'
             }
         };
-    }]);
+    });

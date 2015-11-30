@@ -7,7 +7,10 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
     'usersMdl',
     'profileMdl',
     'authenticationMdl',
-    'registrationMdl'
+    'registrationMdl',
+    'challengeMdl',
+    'userMdl',
+    'ngCookies'
 ]);
 
 // routing

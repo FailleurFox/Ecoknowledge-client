@@ -1,8 +1,8 @@
 /**
  * <challenge> directive
  */
-ecoknowledgeApp
-    .directive('challenge', [function () {
+challengeMdl
+    .directive('challenge', function () {
         return {
             templateUrl:'app/shared/challenge/challenge.view.html',
             restrict: 'E',
@@ -21,4 +21,4 @@ ecoknowledgeApp
                 };
             }
         };
-    }]);
+    });

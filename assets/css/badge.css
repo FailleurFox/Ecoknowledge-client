@@ -53,3 +53,16 @@
     bottom: 10px;
     right: 25px
 }
+
+.badge-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    right: 15px;
+}
+
+.badge-footer button{
+    width:100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
