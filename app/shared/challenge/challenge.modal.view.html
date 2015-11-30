@@ -1,34 +1,88 @@
-<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 badge-container">
-    <!-- panel -->
-    <div class="panel panel-default badge-panel">
-        <div class="panel-body badge-padding">
-            <!-- top-right icon -->
-            <span ng-show="challenge.levelAcquired" class="glyphicon glyphicon-ok badge-glyphicon"></span>
-            <!-- image -->
-            <img class="img-responsive img-circle badge-img center-block" ng-src="{{challenge.image}}"/>
-            <!-- title -->
-            <h4 class="badge-title truncate">{{challenge.name}}</h4>
-            <!-- subtitle -->
-            <p ng-show="challenge.levelAcquired" class="truncate" style="margin-bottom: 0">
-                {{challenge.levels[challenge.levelAcquired-1].name}}
-                ({{challenge.levelAcquired}}/{{challenge.levels.length}})
-            </p>
-            <!-- time bar -->
-            <uib-progressbar class="badge-margin-top" style="margin-bottom: 0; margin-top:10px" ng-show="challenge.timePercent" max="100"
-                             value="challenge.timePercent" type="info"><span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
-            </uib-progressbar>
+<div>
+    <div class='modal-header'>
+        <!-- title -->
+        <h2 style="margin:0;"><span class="important">{{challenge.name}}</span><span ng-show="challenge.levelAcquired"
+                                                                                     class="glyphicon glyphicon-ok badge-glyphicon-sm"></span>
+            <!-- close icon -->
+            <span class="modal-close-icon" ng-click="cancel()">&times;</span></h2>
+    </div>
+    <div class='modal-body'>
+        <!-- image -->
+        <div style="margin-bottom:15px">
+            <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
+                 ng-src="{{challenge.image}}"/>
+            <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
+                 src="assets/img/challenge-default.jpg"/>
+        </div>
 
-            <!-- progress bar -->
-            <uib-progressbar class="badge-margin-top" style="margin-bottom: 0; margin-top:10px" ng-show="challenge.progressPercent" max="100"
-                             value="challenge.progressPercent" type="success"><span
-                    class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
-            </uib-progressbar>
+        <!-- rank -->
+        <p ng-show="challenge.levelAcquired" style="margin-bottom: 0">
+            Niveau actuel : <span class="important">{{challenge.levels[challenge.levelAcquired-1].name}}</span>
+            ({{challenge.levelAcquired}}/{{challenge.levels.length}})
+        </p>
+        <!-- available from -->
+        <p style="margin-bottom: 0">
+            Disponible du : <span class="important">{{challenge.startTime | date:'dd MMMM yyyy'}}
+        </p>
+        <!-- to -->
+        <p style="margin-bottom: 0">
+            Jusqu'au : <span class="important">{{challenge.endTime | date:'dd MMMM yyyy'}}
+        </p>
+        <!-- length -->
+        <p style="margin-bottom: 0">
+            Dur&eacute;e : <span class="important">{{challenge.length}}</span><span ng-show="challenge.timePercent">&nbsp;(temps restant : <span
+                class="important">{{challenge.remaining}}</span>)</span>
+        </p>
+
+        <!-- time bar -->
+        <uib-progressbar style="margin-bottom: 0; margin-top:10px"
+                         ng-show="challenge.timePercent" max="100"
+                         value="challenge.timePercent" type="info"><span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
+        </uib-progressbar>
+
+        <!-- progress bar -->
+        <uib-progressbar style="margin-bottom: 0; margin-top:10px"
+                         ng-show="challenge.progressPercent" max="100"
+                         value="challenge.progressPercent" type="success"><span
+                class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
+        </uib-progressbar>
+
+        <!-- levels -->
+        <h3 class="badge-level-title">Niveaux</h3>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6" style="margin-top:10px" ng-repeat="level in challenge.levels">
+                <!-- level name -->
+                <h4 class="badge-level-title">{{level.name}}</h4>
+                <!-- progress bar (level) -->
+                <uib-progressbar style="margin-bottom:10px"
+                                 ng-show="level.percent" max="100"
+                                 value="level.percent" type="success">{{level.percent}}%
+                </uib-progressbar>
+
+                <!-- conditions -->
+                <div class="row">
+                    <div class="col-xs-12" ng-repeat="condition in level.conditions">
+                        <!-- condition -->
+                        <p style="margin-bottom:0">{{condition.condition}}</p>
+                        <!-- progress bar (condition) -->
+                        <uib-progressbar style="margin-bottom: 0;"
+                                         ng-show="condition.percent" max="100"
+                                         value="condition.percent" type="success">{{condition.percent}}%
+                        </uib-progressbar>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- take up button -->
-        <div class="badge-footer">
-            <button ng-show="!challenge.progressPercent" type="button" class="btn btn-primary center-block"
-                    ng-click="takeUpChallenge()">Challenge accepted !
-            </button>
-        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- close -->
+        <button type="button" class="btn btn-default"
+                ng-click="cancel()">Fermer
+        </button>
+        <!-- take up challenge -->
+        <button type="button" class="btn btn-primary"
+                ng-click="takeUpChallenge()">Relever !
+        </button>
     </div>
 </div>

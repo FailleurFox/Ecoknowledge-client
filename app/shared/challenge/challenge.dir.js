@@ -2,7 +2,7 @@
  * <challenge> directive
  */
 challengeMdl
-    .directive('challenge', function () {
+    .directive('challenge', function ($uibModal) {
         return {
             templateUrl:'app/shared/challenge/challenge.view.html',
             restrict: 'E',
@@ -13,11 +13,21 @@ challengeMdl
             link: function(scope, elem, attrs) {
                 // accept challenge
                 scope.takeUpChallenge  = function () {
+                    // TODO take up challenge
                     console.log("Challenge #"+scope.challenge.id+" accepted !");
                 };
                 // more information on challenge
-                scope.moreInfo  = function () {
-                    console.log("More #"+scope.challenge.id+"...");
+                scope.moreInfo  = function (challenge) {
+                    $uibModal.open({
+                        animation: true,
+                        templateUrl: 'app/shared/challenge/challenge.modal.view.html',
+                        controller: 'challengeModalCtrl',
+                        resolve: {
+                            challenge: function(){
+                                return challenge;
+                            }
+                        }
+                    });
                 };
             }
         };

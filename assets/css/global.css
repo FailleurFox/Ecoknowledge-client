@@ -22,7 +22,7 @@ body{
     text-overflow: ellipsis;
 }
 
-.col-centered {
+.block-centered {
     float: none;
     margin: 0 auto;
 }
@@ -41,4 +41,14 @@ body{
 
 .pointer-hover{
     cursor: pointer;
+}
+
+.modal-close-icon{
+    cursor: pointer;
+    position:absolute;
+    right:15px
+}
+
+.important{
+    font-weight: bold;
 }
