@@ -52,3 +52,7 @@ body{
 .important{
     font-weight: bold;
 }
+
+.navbar-right{
+    padding-right:15px;
+}

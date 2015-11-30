@@ -21,11 +21,11 @@
         <!-- right links -->
         <ul class="nav navbar-nav navbar-right">
             <!-- my profile -->
-            <li ng-show="isLoggedIn()" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{getUserId()}}" ng-click="selected = 3; navCollapsed=true">Mon profil</a></li>
+            <li ng-show="isLoggedIn()" ng-class="{active: 3 == selected}"><a ng-href="#profile/{{getUserId()}}" ng-click="selected = 3; navCollapsed=true"><span class="glyphicon glyphicon-user"></span>&nbsp;Mon profil</a></li>
             <!-- log in -->
-            <li ng-show="!isLoggedIn()" class="pointer-hover"><a ng-click="onAuthClick(); navCollapsed=true">Se connecter</a></li>
+            <li ng-show="!isLoggedIn()" class="pointer-hover"><a ng-click="onAuthClick(); navCollapsed=true"><span class="glyphicon glyphicon-off"></span>&nbsp;Se connecter</a></li>
             <!-- log out -->
-            <li ng-show="isLoggedIn()" class="pointer-hover"><a ng-click="onDisconnectionClick(); navCollapsed=true">Se d&eacute;connecter</a></li>
+            <li ng-show="isLoggedIn()" class="pointer-hover"><a ng-click="onDisconnectionClick(); navCollapsed=true"><span class="glyphicon glyphicon-off"></span>&nbsp;Se d&eacute;connecter</a></li>
         </ul>
     </div>
 </nav>

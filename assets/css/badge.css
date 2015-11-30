@@ -21,6 +21,7 @@
 
 .badge-img {
     max-height: 128px;
+    max-width: 128px;
     height: auto;
     border: 5px solid skyblue;
     border-radius: 500px;
