@@ -4,12 +4,12 @@
 profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     $scope.userId = $routeParams.profileId;
     // challenges selected
-    $scope.selected = "completed";
+    $scope.selected = "badges";
 
     // challenges by category
-    $scope.challengesCompleted = [];
+    $scope.badges = [];
+    $scope.nbBadges = 0;
     $scope.currentChallenges = [];
-    $scope.allChallenges = [];
 
     // TODO call server
     $http({
@@ -26,37 +26,24 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     });
     $http({
         method: 'GET',
+        url: '/Ecoknowledge-client/stub-badges.json'
+    }).success(function (data, status, headers, config) {
+        $scope.badges = data;
+
+        for(var i=0; i<data.length; i++){
+            var badge = data[i];
+            $scope.badges[i] = badge;
+            $scope.nbBadges+=badge.numberPossessed;
+        }
+    });
+    $http({
+        method: 'GET',
         url: '/Ecoknowledge-client/stub-challenges.json'
     }).success(function (data, status, headers, config) {
         for (var i=0; i<data.length; i++) {
             var challenge = data[i];
-            if (challenge.levelAcquired) {
-                $scope.challengesCompleted.push(challenge);
-                var isAlreadyIn = false;
-                for (var j=0; j<$scope.allChallenges.length; j++) {
-                    var challenge2 = $scope.allChallenges[j];
-                    if (challenge2.id == challenge.id) {
-                        isAlreadyIn = true;
-                        break;
-                    }
-                }
-                if (!isAlreadyIn) {
-                    $scope.allChallenges.push(challenge);
-                }
-            }
             if (challenge.progressPercent) {
                 $scope.currentChallenges.push(challenge);
-                var isAlreadyIn = false;
-                for (var j=0; j<$scope.allChallenges.length; j++) {
-                    var challenge2 = $scope.allChallenges[j];
-                    if (challenge2.id == challenge.id) {
-                        isAlreadyIn = true;
-                        break;
-                    }
-                }
-                if (!isAlreadyIn) {
-                    $scope.allChallenges.push(challenge);
-                }
             }
         }
     });

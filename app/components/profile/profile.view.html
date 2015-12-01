@@ -15,17 +15,14 @@
             <h2 style="margin-top:10px; margin-bottom:20px">{{user.points}}pts</h2>
             <!-- challenges category switch -->
             <div class="btn-group">
-                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'completed'">D&eacute;fis r&eacute;ussis : {{challengesCompleted.length}}</label>
-                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">D&eacute;fis en cours : {{currentChallenges.length}}</label>
-                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'all'">Tous : {{allChallenges.length}}</label>
+                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'badges'">Badges obtenus : {{nbBadges}}</label>
+                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">Défis en cours : {{currentChallenges.length}}</label>
             </div>
         </div>
     </div>
 
-    <!-- completed challenges -->
-    <challenge ng-show="selected=='completed'" ng-repeat="challenge in challengesCompleted" challenge="challenge"></challenge>
+    <!-- badges possessed -->
+    <badge ng-show="selected=='badges'" ng-repeat="badge in badges" badge="badge"></badge>
     <!-- current challenges -->
     <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges" challenge="challenge"></challenge>
-    <!-- all challenges -->
-    <challenge ng-show="selected=='all'" ng-repeat="challenge in allChallenges" challenge="challenge"></challenge>
 </div>

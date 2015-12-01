@@ -1,0 +1,21 @@
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 badge-container">
+    <!-- panel -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <img ng-show="badge.image" class="img-responsive img-circle level-img center-block"
+                 ng-src="{{badge.image}}"/>
+            <img ng-show="!badge.image" class="img-responsive img-circle level-img center-block"
+                 src="assets/img/level-default.png"/>
+            <!-- points -->
+            <span class="label label-primary badge-label-points">{{badge.points}}pts</span>
+            <!-- top-right icon -->
+            <span ng-show="badge.numberPossessed>1" class="badge-multiplier">&times;{{badge.numberPossessed}}</span>
+            <!-- challenge name -->
+            <h4 class="badge-title truncate" style="margin-top:0">{{badge.nameChallenge}}</h4>
+            <!-- level name -->
+            <p class="truncate" style="margin-bottom: 0">
+                {{badge.nameLevel}}
+            </p>
+        </div>
+    </div>
+</div>

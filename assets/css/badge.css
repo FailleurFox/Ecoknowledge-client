@@ -17,6 +17,14 @@
 
 .badge-glyphicon-sm {
     color: green;
+    font-size:smaller;
+}
+
+.badge-multiplier {
+    position: absolute;
+    top: 0px;
+    right: 22px;
+    font-size: 2em;
 }
 
 .badge-img {
@@ -112,5 +120,5 @@
 
 .badge-label-points {
     position: relative;
-    top: -25px
+    top: -20px;
 }

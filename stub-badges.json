@@ -1,0 +1,14 @@
+[
+  {
+    "nameChallenge": "FailerFox",
+    "nameLevel": "Expert de l'echec",
+    "points": 1000,
+    "numberPossessed": 3
+  },
+  {
+    "nameChallenge": "Nyctalope",
+    "nameLevel": "Chat",
+    "points": 500,
+    "numberPossessed": 1
+  }
+]
