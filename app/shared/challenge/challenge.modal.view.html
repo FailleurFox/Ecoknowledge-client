@@ -7,51 +7,58 @@
             <span class="modal-close-icon" ng-click="cancel()">&times;</span></h2>
     </div>
     <div class='modal-body'>
-        <!-- image -->
-        <div style="margin-bottom:15px">
-            <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
-                 ng-src="{{challenge.image}}"/>
-            <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
-                 src="assets/img/challenge-default.jpg"/>
+        <div class="row">
+            <!-- image -->
+            <div class="col-xs-12 col-md-3">
+                <div style="margin-bottom:15px">
+                    <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
+                         ng-src="{{challenge.image}}"/>
+                    <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
+                         src="assets/img/challenge-default.jpg"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <!-- rank -->
+                <p ng-show="challenge.levelAcquired" style="margin-bottom: 0">
+                    Niveau actuel : <span class="important">{{challenge.levels[challenge.levelAcquired-1].name}}</span>
+                    ({{challenge.levelAcquired}}/{{challenge.levels.length}})
+                </p>
+                <!-- available from -->
+                <p style="margin-bottom: 0">
+                    Disponible du : <span class="important">{{challenge.startTime | date:'dd MMMM yyyy'}}
+                </p>
+                <!-- to -->
+                <p style="margin-bottom: 0">
+                    Jusqu'au : <span class="important">{{challenge.endTime | date:'dd MMMM yyyy'}}
+                </p>
+                <!-- length -->
+                <p style="margin-bottom: 0">
+                    Durée : <span class="important">{{challenge.length}}</span><span ng-show="challenge.timePercent">&nbsp;(temps restant : <span
+                        class="important">{{challenge.remaining}}</span>)</span>
+                </p>
+
+                <!-- time bar -->
+                <uib-progressbar style="margin-bottom: 0; margin-top:10px"
+                                 ng-show="challenge.timePercent" max="100"
+                                 value="challenge.timePercent" type="info"><span
+                        class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
+                </uib-progressbar>
+
+                <!-- progress bar -->
+                <uib-progressbar style="margin-bottom: 0; margin-top:10px"
+                                 ng-show="challenge.progressPercent" max="100"
+                                 value="challenge.progressPercent"
+                                 type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
+                        class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
+                </uib-progressbar>
+            </div>
         </div>
 
-        <!-- rank -->
-        <p ng-show="challenge.levelAcquired" style="margin-bottom: 0">
-            Niveau actuel : <span class="important">{{challenge.levels[challenge.levelAcquired-1].name}}</span>
-            ({{challenge.levelAcquired}}/{{challenge.levels.length}})
-        </p>
-        <!-- available from -->
-        <p style="margin-bottom: 0">
-            Disponible du : <span class="important">{{challenge.startTime | date:'dd MMMM yyyy'}}
-        </p>
-        <!-- to -->
-        <p style="margin-bottom: 0">
-            Jusqu'au : <span class="important">{{challenge.endTime | date:'dd MMMM yyyy'}}
-        </p>
-        <!-- length -->
-        <p style="margin-bottom: 0">
-            Durée : <span class="important">{{challenge.length}}</span><span ng-show="challenge.timePercent">&nbsp;(temps restant : <span
-                class="important">{{challenge.remaining}}</span>)</span>
-        </p>
-
-        <!-- time bar -->
-        <uib-progressbar style="margin-bottom: 0; margin-top:10px"
-                         ng-show="challenge.timePercent" max="100"
-                         value="challenge.timePercent" type="info"><span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
-        </uib-progressbar>
-
-        <!-- progress bar -->
-        <uib-progressbar style="margin-bottom: 0; margin-top:10px"
-                         ng-show="challenge.progressPercent" max="100"
-                         value="challenge.progressPercent" type="success"><span
-                class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
-        </uib-progressbar>
-
         <!-- levels -->
-        <h3 class="badge-level-title" style="margin-bottom:0">Niveaux</h3>
+        <h3 class="badge-level-title" style="margin-bottom:20px">Niveaux</h3>
 
         <div class="row">
-            <div class="col-xs-12 col-md-6" style="margin-top:10px" ng-repeat="level in challenge.levels">
+            <div class="col-xs-12 col-sm-6 col-md-4" style="margin-top:10px" ng-repeat="level in challenge.levels">
                 <!-- image -->
                 <div style="margin-bottom:10px">
                     <img ng-show="level.image" class="img-responsive img-circle level-img center-block"
@@ -60,11 +67,15 @@
                          src="assets/img/level-default.png"/>
                 </div>
                 <!-- level name -->
-                <h4 class="badge-level-title" style="margin-bottom: 0">{{level.name}}</h4>
+                <h4 style="margin-bottom: 0; text-align:center"><span
+                        style="font-weight:bold">{{level.name}}</span><span
+                        ng-show="challenge.levelAcquired>=level.index"
+                        class="glyphicon glyphicon-ok badge-glyphicon-sm"></h4>
                 <!-- progress bar (level) -->
                 <uib-progressbar style="margin-bottom:10px"
                                  ng-show="level.percent" max="100"
-                                 value="level.percent" type="success">{{level.percent}}%
+                                 value="level.percent" type="{{level.percent == 100 ? 'success' : ''}}">
+                    {{level.percent}}%
                 </uib-progressbar>
 
                 <!-- conditions -->
@@ -75,7 +86,7 @@
                         <!-- progress bar (condition) -->
                         <uib-progressbar class="condition-progressbar" style="margin-bottom: 0;"
                                          ng-show="condition.percent" max="100"
-                                         value="condition.percent" type="success">
+                                         value="condition.percent" type="{{condition.percent == 100 ? 'success' : ''}}">
                         </uib-progressbar>
                     </div>
                 </div>

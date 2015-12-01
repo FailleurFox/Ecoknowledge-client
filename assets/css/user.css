@@ -11,7 +11,6 @@
 
 .user-pic-sm{
     max-height: 100px;
-    max-width: 100px;
     height:auto;
     border: 2px solid black;
     -webkit-box-shadow: 4px 4px 2px 0px rgba(200, 200, 200, 0.75);
@@ -21,7 +20,6 @@
 
 .user-pic-lg{
     max-height: 200px;
-    max-width: 200px;
     height:auto;
     border: 2px solid black;
     -webkit-box-shadow: 7px 7px 5px 0px rgba(200, 200, 200, 0.75);

@@ -9,6 +9,8 @@
             <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block" src="assets/img/challenge-default.jpg"/>
             <!-- title -->
             <h4 class="badge-title truncate">{{challenge.name}}</h4>
+            <!-- points -->
+            <span class="label label-primary">lol</span>
             <!-- subtitle -->
             <p ng-show="challenge.levelAcquired" class="truncate" style="margin-bottom: 0">
                 {{challenge.levels[challenge.levelAcquired-1].name}}
@@ -23,7 +25,7 @@
 
                 <!-- progress bar -->
                 <uib-progressbar class="badge-progressbar" style="margin-bottom: 0;" max="100"
-                                 value="challenge.progressPercent" type="success"><span
+                                 value="challenge.progressPercent" type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
                         class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
                 </uib-progressbar>
             </div>

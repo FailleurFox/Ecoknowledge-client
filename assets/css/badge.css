@@ -21,7 +21,6 @@
 
 .badge-img {
     max-height: 128px;
-    max-width: 128px;
     height: auto;
     border: 5px solid skyblue;
     border-radius: 500px;
@@ -34,7 +33,6 @@
 
 .level-img {
     max-height: 86px;
-    max-width: 86px;
     height: auto;
     border: 5px solid skyblue;
     border-radius: 500px;

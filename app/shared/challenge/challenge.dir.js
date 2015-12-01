@@ -22,6 +22,7 @@ challengeMdl
                         animation: true,
                         templateUrl: 'app/shared/challenge/challenge.modal.view.html',
                         controller: 'challengeModalCtrl',
+                        size: 'lg',
                         resolve: {
                             challenge: function(){
                                 return challenge;
