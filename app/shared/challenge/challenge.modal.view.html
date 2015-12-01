@@ -9,13 +9,13 @@
     <div class='modal-body'>
         <div class="row">
             <!-- image -->
-            <div class="col-xs-12 col-md-3">
-                <div style="margin-bottom:15px">
-                    <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
-                         ng-src="{{challenge.image}}"/>
-                    <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
-                         src="assets/img/challenge-default.jpg"/>
-                </div>
+            <div class="col-xs-12 col-md-3" style="margin-bottom:15px; text-align:center">
+                <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
+                     ng-src="{{challenge.image}}"/>
+                <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
+                     src="assets/img/challenge-default.jpg"/>
+                <!-- points -->
+                <span class="label label-primary badge-label-points">{{challenge.levels.length==1 ? challenge.levels[0].points : challenge.levels[0].points+" - "+challenge.levels[challenge.levels.length-1].points}}pts</span>
             </div>
             <div class="col-xs-12 col-md-9">
                 <!-- rank -->
@@ -60,11 +60,13 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4" style="margin-top:10px" ng-repeat="level in challenge.levels">
                 <!-- image -->
-                <div style="margin-bottom:10px">
+                <div style="margin-bottom:10px; text-align:center">
                     <img ng-show="level.image" class="img-responsive img-circle level-img center-block"
                          ng-src="{{level.image}}"/>
                     <img ng-show="!level.image" class="img-responsive img-circle level-img center-block"
                          src="assets/img/level-default.png"/>
+                    <!-- points -->
+                    <span class="label label-primary badge-label-points">{{level.points}}pts</span>
                 </div>
                 <!-- level name -->
                 <h4 style="margin-bottom: 0; text-align:center"><span

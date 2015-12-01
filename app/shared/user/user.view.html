@@ -6,10 +6,10 @@
             <!-- image -->
             <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block" ng-src="{{user.profilePic}}"/>
             <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block" src="assets/img/user-default.png"/>
+            <!-- points -->
+            <span class="label user-label-points">{{user.points}}pts</span>
             <!-- name -->
             <h4 class="truncate user-name">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
-            <!-- points -->
-            <p class="truncate user-points">({{user.points}}pts)</p>
         </div>
     </div>
     </a>

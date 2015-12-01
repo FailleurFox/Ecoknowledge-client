@@ -44,6 +44,7 @@
 }
 
 .user-name{
+    margin-top:0;
     margin-bottom: 5px;
     color: #333;
 }
@@ -52,4 +53,10 @@
     margin-top:0;
     margin-bottom: 0;
     color: #333;
+}
+
+.user-label-points {
+    position: relative;
+    top: -20px;
+    background-color:black
 }

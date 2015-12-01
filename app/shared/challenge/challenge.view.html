@@ -2,15 +2,17 @@
     <!-- panel -->
     <div class="panel panel-default badge-panel">
         <div class="panel-body badge-padding pointer-hover" ng-click="moreInfo(challenge)">
+            <!-- image -->
+            <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block"
+                 ng-src="{{challenge.image}}"/>
+            <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block"
+                 src="assets/img/challenge-default.jpg"/>
+            <!-- points -->
+            <span class="label label-primary badge-label-points">{{challenge.levels.length==1 ? challenge.levels[0].points : challenge.levels[0].points+" - "+challenge.levels[challenge.levels.length-1].points}}pts</span>
             <!-- top-right icon -->
             <span ng-show="challenge.levelAcquired" class="glyphicon glyphicon-ok badge-glyphicon"></span>
-            <!-- image -->
-            <img ng-show="challenge.image" class="img-responsive img-circle badge-img center-block" ng-src="{{challenge.image}}"/>
-            <img ng-show="!challenge.image" class="img-responsive img-circle badge-img center-block" src="assets/img/challenge-default.jpg"/>
             <!-- title -->
             <h4 class="badge-title truncate">{{challenge.name}}</h4>
-            <!-- points -->
-            <span class="label label-primary">lol</span>
             <!-- subtitle -->
             <p ng-show="challenge.levelAcquired" class="truncate" style="margin-bottom: 0">
                 {{challenge.levels[challenge.levelAcquired-1].name}}
@@ -20,12 +22,14 @@
             <div ng-show="challenge.timePercent" class="badge-footer">
                 <!-- time bar -->
                 <uib-progressbar class="badge-progressbar" style="margin-bottom: 0" max="100"
-                                 value="challenge.timePercent" type="info"><span class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
+                                 value="challenge.timePercent" type="info"><span
+                        class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
                 </uib-progressbar>
 
                 <!-- progress bar -->
                 <uib-progressbar class="badge-progressbar" style="margin-bottom: 0;" max="100"
-                                 value="challenge.progressPercent" type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
+                                 value="challenge.progressPercent"
+                                 type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
                         class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
                 </uib-progressbar>
             </div>
