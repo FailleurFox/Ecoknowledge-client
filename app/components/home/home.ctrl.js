@@ -13,8 +13,8 @@ homeMdl.controller('homeCtrl', function ($scope, AuthenticationService) {
             },
             {
                 "profilePic": "assets/img/sebastien_petillon.jpg",
-                "firstName": "Sebastien",
-                "lastName": "Petillon"
+                "firstName": "Sébastien",
+                "lastName": "Pétillon"
             },
             {
                 "profilePic": "assets/img/hugo_simond.jpg",

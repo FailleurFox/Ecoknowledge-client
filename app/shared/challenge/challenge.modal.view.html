@@ -30,7 +30,7 @@
         </p>
         <!-- length -->
         <p style="margin-bottom: 0">
-            Dur&eacute;e : <span class="important">{{challenge.length}}</span><span ng-show="challenge.timePercent">&nbsp;(temps restant : <span
+            Durée : <span class="important">{{challenge.length}}</span><span ng-show="challenge.timePercent">&nbsp;(temps restant : <span
                 class="important">{{challenge.remaining}}</span>)</span>
         </p>
 
@@ -52,8 +52,15 @@
 
         <div class="row">
             <div class="col-xs-12 col-md-6" style="margin-top:10px" ng-repeat="level in challenge.levels">
+                <!-- image -->
+                <div style="margin-bottom:10px">
+                    <img ng-show="level.image" class="img-responsive img-circle level-img center-block"
+                         ng-src="{{level.image}}"/>
+                    <img ng-show="!level.image" class="img-responsive img-circle level-img center-block"
+                         src="assets/img/level-default.png"/>
+                </div>
                 <!-- level name -->
-                <h4 class="badge-level-title">{{level.name}}</h4>
+                <h4 class="badge-level-title" style="margin-bottom: 0">{{level.name}}</h4>
                 <!-- progress bar (level) -->
                 <uib-progressbar style="margin-bottom:10px"
                                  ng-show="level.percent" max="100"
@@ -64,16 +71,34 @@
                 <div class="row">
                     <div class="col-xs-12" ng-repeat="condition in level.conditions">
                         <!-- condition -->
-                        <p style="margin-bottom:0">{{condition.condition}}</p>
+                        <p style="margin-bottom:0">&bull;&nbsp;{{condition.condition}}</p>
                         <!-- progress bar (condition) -->
+                        <uib-progressbar class="condition-progressbar" style="margin-bottom: 0;"
+                                         ng-show="condition.percent" max="100"
+                                         value="condition.percent" type="success">
+                        </uib-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<uib-accordion close-others="oneAtATime">
+            <uib-accordion-group ng-repeat="level in challenge.levels" heading="{{level.name}}">
+                <uib-progressbar style="margin-bottom:10px"
+                                 ng-show="level.percent" max="100"
+                                 value="level.percent" type="success">{{level.percent}}%
+                </uib-progressbar>
+                <div class="row">
+                    <div class="col-xs-12" ng-repeat="condition in level.conditions">
+                        <p style="margin-bottom:0">{{condition.condition}}</p>
                         <uib-progressbar style="margin-bottom: 0;"
                                          ng-show="condition.percent" max="100"
                                          value="condition.percent" type="success">{{condition.percent}}%
                         </uib-progressbar>
                     </div>
                 </div>
-            </div>
-        </div>
+            </uib-accordion-group>
+        </uib-accordion> -->
     </div>
     <div class="modal-footer">
         <!-- close -->
