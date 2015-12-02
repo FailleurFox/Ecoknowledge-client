@@ -2,7 +2,7 @@
  * <challenge> directive
  */
 challengeMdl
-    .directive('challenge', function ($uibModal) {
+    .directive('challenge', function ($uibModal, $http, AuthenticationService) {
         return {
             templateUrl:'app/shared/challenge/challenge.view.html',
             restrict: 'E',
@@ -14,7 +14,27 @@ challengeMdl
                 // accept challenge
                 scope.takeUpChallenge  = function () {
                     // TODO take up challenge
-                    console.log("Challenge #"+scope.challenge.id+" accepted !");
+
+                    var userID = AuthenticationService.getUserId();
+
+                    console.log("USERID : ", userID);
+
+                    var req = {
+                        method: 'POST',
+                        url: 'http://localhost:8081/Ecoknowledge/goal',
+                        data: {
+                            challenge : scope.challenge.id,
+                            user : userID
+                        }
+                    };
+
+                    $http(req).then(function(){
+                        console.log("Goal pris sans problème ma gueule !");
+                        // TODO
+                    }, function(){
+                        console.log("Erreur en prenant le goal... tooo baaaad");
+                        // TODO
+                    });
                 };
                 // more information on challenge
                 scope.moreInfo  = function (challenge) {
