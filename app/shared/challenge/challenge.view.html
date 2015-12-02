@@ -35,7 +35,7 @@
             </div>
         </div>
         <!-- take up button -->
-        <div ng-show="!challenge.progressPercent" class="badge-footer">
+        <div ng-show="!challenge.progressPercent && isLoggedIn()" class="badge-footer">
             <button type="button" class="btn btn-primary center-block"
                     ng-click="takeUpChallenge()">Relever !
             </button>

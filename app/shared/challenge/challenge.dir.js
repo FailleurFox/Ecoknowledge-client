@@ -2,7 +2,7 @@
  * <challenge> directive
  */
 challengeMdl
-    .directive('challenge', function ($uibModal) {
+    .directive('challenge', function ($uibModal, AuthenticationService) {
         return {
             templateUrl:'app/shared/challenge/challenge.view.html',
             restrict: 'E',
@@ -30,6 +30,7 @@ challengeMdl
                         }
                     });
                 };
+                scope.isLoggedIn = AuthenticationService.isLoggedIn;
             }
         };
     });
