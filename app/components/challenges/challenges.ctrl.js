@@ -2,7 +2,7 @@
  * Challenges page controller
  */
 
-challengesMdl.controller('challengesCtrl', function ($scope, $http) {
+challengesMdl.controller('challengesCtrl', function ($scope, $http, AuthenticationService) {
     // filter bar variables
     $scope.sortOptions = {
         'nom': 'name',
