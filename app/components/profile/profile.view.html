@@ -15,14 +15,17 @@
             <h2 style="margin-top:10px; margin-bottom:20px">{{user.points}}pts</h2>
             <!-- challenges category switch -->
             <div class="btn-group">
-                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'badges'">Badges obtenus : {{nbBadges}}</label>
-                <label class="btn btn-primary" ng-model="selected" uib-btn-radio="'current'">Défis en cours : {{currentChallenges.length}}</label>
+                <label class="btn btn-primary" ng-model="selected" ng-change="categorySelected()" uib-btn-radio="'badges'">Badges obtenus : {{nbBadges}}</label>
+                <label class="btn btn-primary" ng-model="selected" ng-change="categorySelected()" uib-btn-radio="'current'">Défis en cours : {{currentChallenges.length}}</label>
             </div>
         </div>
     </div>
 
+    <!-- filter bar -->
+    <ng-include src="'app/shared/filterbar/filterbar.view.html'"></ng-include>
+
     <!-- badges possessed -->
-    <badge ng-show="selected=='badges'" ng-repeat="badge in badges" badge="badge"></badge>
+    <badge ng-show="selected=='badges'" ng-repeat="badge in badges | filter : searchFor | orderBy : sortBy : reverseOrder" badge="badge"></badge>
     <!-- current challenges -->
-    <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges" challenge="challenge"></challenge>
+    <challenge ng-show="selected=='current'" ng-repeat="challenge in currentChallenges | filter : searchFor | orderBy : sortBy : reverseOrder" challenge="challenge"></challenge>
 </div>

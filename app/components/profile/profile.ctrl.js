@@ -3,13 +3,40 @@
  */
 profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     $scope.userId = $routeParams.profileId;
-    // challenges selected
-    $scope.selected = "badges";
+
+    // category selected
+    $scope.selected = 'badges'
 
     // challenges by category
+    $scope.currentChallenges = [];
     $scope.badges = [];
     $scope.nbBadges = 0;
-    $scope.currentChallenges = [];
+
+    // define the filterbar vars depending on the selected category
+    $scope.categorySelected = function () {
+        switch ($scope.selected) {
+            case 'badges':
+                $scope.sortOptions = {
+                    'nom du badge': 'nameLevel',
+                    'nom du défi': 'nameChallenge',
+                    'points': 'points'
+                };
+                $scope.sortBy = 'nameLevel';
+                break;
+            case 'current':
+                $scope.sortOptions = {
+                    'nom': 'name',
+                    'points min.': 'levels[0].points',
+                    'points max.': 'levels[challenge.levels.length-1].points',
+                    '% temps': 'percentTime',
+                    '% progression': 'percentProgress'
+                };
+                $scope.sortBy = 'name';
+                break
+        }
+    };
+    $scope.categorySelected();
+    //*************************************************************
 
     // TODO call server
     $http({
@@ -30,17 +57,17 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     }).success(function (data, status, headers, config) {
         $scope.badges = data;
 
-        for(var i=0; i<data.length; i++){
+        for (var i = 0; i < data.length; i++) {
             var badge = data[i];
             $scope.badges[i] = badge;
-            $scope.nbBadges+=badge.numberPossessed;
+            $scope.nbBadges += badge.numberPossessed;
         }
     });
     $http({
         method: 'GET',
         url: '/Ecoknowledge-client/stub-challenges.json'
     }).success(function (data, status, headers, config) {
-        for (var i=0; i<data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
             var challenge = data[i];
             if (challenge.progressPercent) {
                 $scope.currentChallenges.push(challenge);
