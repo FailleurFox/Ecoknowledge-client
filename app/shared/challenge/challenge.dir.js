@@ -3,6 +3,7 @@
  */
 challengeMdl
     .directive('challenge', function ($uibModal, $http, AuthenticationService) {
+
         return {
             templateUrl:'app/shared/challenge/challenge.view.html',
             restrict: 'E',
@@ -50,6 +51,7 @@ challengeMdl
                         }
                     });
                 };
+                scope.isLoggedIn = AuthenticationService.isLoggedIn;
             }
         };
     });
