@@ -22,7 +22,7 @@ challengeMdl
 
                     var req = {
                         method: 'POST',
-                        url: 'http://localhost:8081/Ecoknowledge/goal',
+                        url: 'http://localhost:8081/Ecoknowledge/goals',
                         data: {
                             challenge : scope.challenge.id,
                             user : userID
