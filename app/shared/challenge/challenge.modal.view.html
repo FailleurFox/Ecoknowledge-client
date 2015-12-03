@@ -101,7 +101,15 @@
                     <div class="row">
                         <div class="col-xs-12" ng-repeat="condition in level.conditions">
                             <!-- condition -->
-                            <p style="margin-bottom:0">&bull;&nbsp;{{condition.condition}}</p>
+                            <p style="margin-bottom:0"><span class="glyphicon"
+                                                             ng-class="{
+                                                             'glyphicon-unchecked':
+                                                                (!condition.percent&&(challenge.levelAcquired<level.index
+                                                                ||!challenge.levelAcquired))||condition.percent<100,
+                                                             'glyphicon-check':
+                                                                challenge.levelAcquired>=level.index
+                                                                ||condition.percent==100}"></span>&nbsp;{{condition.condition}}
+                            </p>
                             <!-- progress bar (condition) -->
                             <uib-progressbar class="condition-progressbar" style="margin-bottom: 0;"
                                              ng-show="condition.percent" max="100"
