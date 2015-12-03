@@ -9,7 +9,7 @@ ecoknowledgeApp.factory('AuthenticationService', function($cookies){
         },
 
         getUserId : function(){
-            return "e3901108-b77d-4412-9cca-39599c90faad";
+            return "620643fd-c7a4-4d41-aed9-bfe0f7a914b1";
             //  FIXME return $cookies.get("EcoknowledgeUserId");
         },
 
