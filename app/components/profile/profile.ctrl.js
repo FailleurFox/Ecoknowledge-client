@@ -19,7 +19,8 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
                 $scope.sortOptions = {
                     'nom du badge': 'nameLevel',
                     'nom du défi': 'nameChallenge',
-                    'points': 'points'
+                    'points': 'points',
+                    'quantité obtenue':'numberPossessed'
                 };
                 $scope.sortBy = 'nameLevel';
                 break;
@@ -27,7 +28,7 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
                 $scope.sortOptions = {
                     'nom': 'name',
                     'points min.': 'levels[0].points',
-                    'points max.': 'levels[challenge.levels.length-1].points',
+                    'points max.': 'levels.slice(-1)[0].points',
                     '% temps': 'percentTime',
                     '% progression': 'percentProgress'
                 };

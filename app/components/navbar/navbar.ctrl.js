@@ -16,7 +16,7 @@ navbarMdl.controller('navbarCtrl', function ($scope, $uibModal, AuthenticationSe
         });
     };
 
-    // "Se déconnecter"
+    // "Se dï¿½connecter"
     $scope.onDisconnectionClick = function(){
         AuthenticationService.disconnect();
     };

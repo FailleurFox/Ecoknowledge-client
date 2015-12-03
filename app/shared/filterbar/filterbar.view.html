@@ -22,8 +22,8 @@
                 <!-- ascending/descending -->
                 <div class="input-group-btn">
                     <button class="btn btn-default" ng-click="$parent.reverseOrder = !$parent.reverseOrder">
-                        <span ng-show="!$parent.reverseOrder" class="glyphicon glyphicon-arrow-up"></span>
-                        <span ng-show="$parent.reverseOrder" class="glyphicon glyphicon-arrow-down"></span>
+                        <span class="glyphicon"
+                              ng-class="{'glyphicon-sort-by-attributes':!$parent.reverseOrder, 'glyphicon-sort-by-attributes-alt':$parent.reverseOrder}"></span>
                     </button>
                 </div>
             </div>

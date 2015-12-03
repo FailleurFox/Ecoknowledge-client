@@ -12,11 +12,15 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
     'userMdl',
     'ngCookies',
     'badgeMdl'
-]);
+])
+    //iInitializing rootScope
+    .run(function ($rootScope) {
+        $rootScope.serverURL = "lol";
+    })
 
-// routing
-ecoknowledgeApp.config(
-    function($routeProvider) {
+    // routing
+    .config(
+    function ($routeProvider) {
         $routeProvider.
             when('/home', {
                 templateUrl: 'app/components/home/home.view.html'

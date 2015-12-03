@@ -25,7 +25,7 @@
         <div class="panel panel-default col-sm-10 col-md-8 col-lg-6 block-centered padding justified">
             <h1 style="margin-bottom: 20px; margin-top:5px">&Agrave; propos
                 <img src="assets/img/favicon.ico" style="position: absolute; right:15px"/></h1>
-            <p>Ecoknowledge est un PFE (Projet de Fin d'Études) développé lors de la dernière
+            <p>Ecoknowledge est un PFE (Projet de Fin d'Études) développé lors de notre dernière
                 année du cursus d'ingénierie informatique à Polytech Nice-Sophia (2015-2016).</p>
 
             <p>Ce projet s'inscrit dans un contexte d'économie d'énergie au sein de
@@ -41,12 +41,10 @@
             <div style="display:flex">
                 <div ng-repeat="user in developers" style="flex:1">
                     <!-- image -->
-                    <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block"
-                         ng-src="{{user.profilePic}}"/>
-                    <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block"
-                         src="assets/img/user-default.png"/>
+                    <img class="img-responsive img-circle user-pic user-pic-sm center-block animated flipInX"
+                         ng-src="{{user.profilePic ? user.profilePic : 'assets/img/user-default.png'}}"/>
                     <!-- name -->
-                    <h4 style="text-align:center">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
+                    <h4 style="text-align:center" class="animated fadeInDown">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
                 </div>
             </div>
         </div>
