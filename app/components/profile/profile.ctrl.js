@@ -1,7 +1,7 @@
 /**
  * Profile page controller
  */
-profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
+profileMdl.controller('profileCtrl', function ($scope, $routeParams, $rootScope, $http) {
     $scope.userId = $routeParams.profileId;
 
     // category selected
