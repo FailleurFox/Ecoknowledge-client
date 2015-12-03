@@ -41,12 +41,10 @@
             <div style="display:flex">
                 <div ng-repeat="user in developers" style="flex:1">
                     <!-- image -->
-                    <img ng-show="user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block"
-                         ng-src="{{user.profilePic}}"/>
-                    <img ng-show="!user.profilePic" class="img-responsive img-circle user-pic user-pic-sm center-block"
-                         src="assets/img/user-default.png"/>
+                    <img class="img-responsive img-circle user-pic user-pic-sm center-block animated flipInX"
+                         ng-src="{{user.profilePic ? user.profilePic : 'assets/img/user-default.png'}}"/>
                     <!-- name -->
-                    <h4 style="text-align:center">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
+                    <h4 style="text-align:center" class="animated fadeInDown">{{user.firstName}} {{user.lastName.toUpperCase()}}</h4>
                 </div>
             </div>
         </div>

@@ -37,6 +37,11 @@
     -webkit-box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
     -moz-box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
     box-shadow: 5px 5px 3px 0px rgba(200, 200, 200, 0.75);
+
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .level-img {
@@ -97,7 +102,7 @@
 }
 
 .badge-panel:hover img {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .badge-progressbar:not(:last-child) {

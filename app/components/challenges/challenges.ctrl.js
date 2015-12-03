@@ -28,5 +28,5 @@ challengesMdl.controller('challengesCtrl', function ($scope, $http, $interval) {
     // Auto refresh
     $interval(function(){
         $scope.refresh();
-    }, 10000);
+    }, 60000);
 });

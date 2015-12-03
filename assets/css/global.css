@@ -64,3 +64,14 @@ body{
 .justified{
     text-align:justify;
 }
+
+.card-shadow{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(200, 200, 200, 0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(200, 200, 200, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(200, 200, 200, 0.75);
+}
+
+.animated.pulse {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
