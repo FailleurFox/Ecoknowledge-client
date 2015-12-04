@@ -9,7 +9,8 @@ challengeMdl
             restrict: 'E',
             replace: true,
             scope : {
-                challenge: '=challenge'
+                challenge: '=challenge',
+                refreshFunction: '&onServerResponse'
             },
             link: function(scope, elem, attrs) {
                 // accept challenge
@@ -31,9 +32,11 @@ challengeMdl
 
                     $http(req).then(function(){
                         console.log("Goal pris sans problème ma gueule !");
+                        scope.refreshFunction();
                         // TODO
                     }, function(){
                         console.log("Erreur en prenant le goal... tooo baaaad");
+                        scope.refreshFunction();
                         // TODO
                     });
                 };
@@ -47,6 +50,9 @@ challengeMdl
                         resolve: {
                             challenge: function(){
                                 return challenge;
+                            },
+                            refreshFunction: function(){
+                                return scope.refreshFunction;
                             }
                         }
                     });

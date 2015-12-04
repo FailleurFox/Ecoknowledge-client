@@ -1,8 +1,10 @@
 /**
  * Challenge modal controller
  */
-challengeMdl.controller('challengeModalCtrl', function ($scope, $uibModalInstance, challenge) {
+challengeMdl.controller('challengeModalCtrl', function ($scope, $uibModalInstance, challenge, refreshFunction, AuthenticationService) {
     $scope.challenge = challenge;
+
+    $scope.isLoggedIn = AuthenticationService.isLoggedIn;
 
     $scope.cancel = function(){
         $uibModalInstance.close();
@@ -13,5 +15,6 @@ challengeMdl.controller('challengeModalCtrl', function ($scope, $uibModalInstanc
         // TODO take up challenge
         console.log("Challenge #"+$scope.challenge.id+" accepted !");
         $uibModalInstance.close();
+        refreshFunction();
     };
 });
