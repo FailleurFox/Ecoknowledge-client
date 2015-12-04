@@ -8,13 +8,15 @@ challengeMdl
             restrict: 'E',
             replace: true,
             scope : {
-                challenge: '=challenge'
+                challenge: '=challenge',
+                refreshFunction: '&onServerResponse'
             },
             link: function(scope, elem, attrs) {
                 // accept challenge
                 scope.takeUpChallenge  = function () {
                     // TODO take up challenge
                     console.log("Challenge #"+scope.challenge.id+" accepted !");
+                    scope.refreshFunction();
                 };
                 // more information on challenge
                 scope.moreInfo  = function (challenge) {
@@ -26,6 +28,9 @@ challengeMdl
                         resolve: {
                             challenge: function(){
                                 return challenge;
+                            },
+                            refreshFunction: function(){
+                                return scope.refreshFunction;
                             }
                         }
                     });

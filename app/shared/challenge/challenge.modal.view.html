@@ -100,8 +100,10 @@
                             <p style="margin-bottom:0"><span class="glyphicon"
                                                              ng-class="{
                                                              'glyphicon-unchecked':
-                                                                (!condition.percent&&(challenge.levelAcquired<level.index
-                                                                ||!challenge.levelAcquired))||condition.percent<100,
+                                                                (!condition.percent
+                                                                    &&(challenge.levelAcquired<level.index
+                                                                        ||!challenge.levelAcquired))
+                                                                ||condition.percent<100,
                                                              'glyphicon-check':
                                                                 challenge.levelAcquired>=level.index
                                                                 ||condition.percent==100}"></span>&nbsp;{{condition.condition}}
@@ -124,7 +126,7 @@
                 ng-click="cancel()">Fermer
         </button>
         <!-- take up challenge -->
-        <button ng-show="!challenge.progressPercent" type="button" class="btn btn-primary"
+        <button ng-show="!challenge.progressPercent && isLoggedIn()" type="button" class="btn btn-primary"
                 ng-click="takeUpChallenge()">Relever !
         </button>
     </div>
