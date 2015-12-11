@@ -15,7 +15,7 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
 ])
     //iInitializing rootScope
     .run(function ($rootScope) {
-        $rootScope.serverURL = "lol";
+        $rootScope.serverURL = "http://localhost:8080/Ecoknowledge/";
     })
 
     // routing

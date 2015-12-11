@@ -20,10 +20,11 @@ challengeMdl
                     var userID = AuthenticationService.getUserId();
 
                     console.log("USERID : ", userID);
+                    console.log("CHALLENGEID : ", scope.challenge.id);
 
                     var req = {
                         method: 'POST',
-                        url: 'http://localhost:8081/Ecoknowledge/goals',
+                        url: 'http://localhost:8080/Ecoknowledge/goals',
                         data: {
                             challenge : scope.challenge.id,
                             user : userID
