@@ -17,7 +17,7 @@
                 ({{challenge.levelAcquired}}/{{challenge.levels.length}})
             </p>
 
-            <div ng-show="challenge.timePercent" class="badge-footer">
+            <div ng-show="challenge.timePercent>=0" class="badge-footer">
                 <!-- time bar -->
                 <uib-progressbar class="badge-progressbar" style="margin-bottom: 0" max="100"
                                  value="challenge.timePercent" type="info"><span
@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- take up button -->
-        <div ng-show="!challenge.progressPercent && isLoggedIn()" class="badge-footer">
+        <div ng-show="challenge.progressPercent==null && isLoggedIn()" class="badge-footer">
             <button type="button" class="btn btn-primary center-block"
                     ng-click="takeUpChallenge()">Relever !
             </button>

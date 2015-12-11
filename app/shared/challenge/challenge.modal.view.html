@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-xs-12 col-md-9">
                             <!-- rank -->
-                            <p ng-show="challenge.levelAcquired" style="margin-bottom: 0">
+                            <p ng-show="challenge.levelAcquired>=1" style="margin-bottom: 0">
                                 Niveau actuel : <span class="important">{{challenge.levels[challenge.levelAcquired-1].name}}</span>
                                 ({{challenge.levelAcquired}}/{{challenge.levels.length}})
                             </p>
@@ -35,20 +35,20 @@
                             <!-- length -->
                             <p style="margin-bottom: 0">
                                 Durée : <span class="important">{{challenge.length}}</span><span
-                                    ng-show="challenge.timePercent">&nbsp;(temps restant : <span
+                                    ng-show="challenge.remaining!=null">&nbsp;(temps restant : <span
                                     class="important">{{challenge.remaining}}</span>)</span>
                             </p>
 
                             <!-- time bar -->
                             <uib-progressbar style="margin-bottom: 0; margin-top:10px"
-                                             ng-show="challenge.timePercent" max="100"
+                                             ng-show="challenge.timePercent>=0" max="100"
                                              value="challenge.timePercent" type="info"><span
                                     class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
                             </uib-progressbar>
 
                             <!-- progress bar -->
                             <uib-progressbar style="margin-bottom: 0; margin-top:10px"
-                                             ng-show="challenge.progressPercent" max="100"
+                                             ng-show="challenge.progressPercent>=0" max="100"
                                              value="challenge.progressPercent"
                                              type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
                                     class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
@@ -87,7 +87,7 @@
                             class="glyphicon glyphicon-ok badge-glyphicon-sm"></span></h4>
                     <!-- progress bar (level) -->
                     <uib-progressbar style="margin-bottom:10px"
-                                     ng-show="level.percent" max="100"
+                                     ng-show="level.percent>=0" max="100"
                                      value="level.percent" type="{{level.percent == 100 ? 'success' : ''}}">
                         <span
                                 class="glyphicon glyphicon-tasks"></span>&nbsp;{{level.percent}}%
@@ -100,9 +100,9 @@
                             <p style="margin-bottom:0"><span class="glyphicon"
                                                              ng-class="{
                                                              'glyphicon-unchecked':
-                                                                (!condition.percent
+                                                                (condition.percent==null
                                                                     &&(challenge.levelAcquired<level.index
-                                                                        ||!challenge.levelAcquired))
+                                                                        ||challenge.levelAcquired==null))
                                                                 ||condition.percent<100,
                                                              'glyphicon-check':
                                                                 challenge.levelAcquired>=level.index
@@ -110,7 +110,7 @@
                             </p>
                             <!-- progress bar (condition) -->
                             <uib-progressbar class="condition-progressbar" style="margin-bottom: 0;"
-                                             ng-show="condition.percent" max="100"
+                                             ng-show="condition.percent>=0" max="100"
                                              value="condition.percent"
                                              type="{{condition.percent == 100 ? 'success' : ''}}">
                             </uib-progressbar>
@@ -126,7 +126,7 @@
                 ng-click="cancel()">Fermer
         </button>
         <!-- take up challenge -->
-        <button ng-show="!challenge.progressPercent && isLoggedIn()" type="button" class="btn btn-primary"
+        <button ng-show="challenge.progressPercent==null && isLoggedIn()" type="button" class="btn btn-primary"
                 ng-click="takeUpChallenge()">Relever !
         </button>
     </div>
