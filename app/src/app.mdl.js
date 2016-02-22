@@ -26,13 +26,13 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
                 templateUrl: 'src/components/home/home.view.html'
             }).
             when('/challenges', {
-                templateUrl: 'src/components/challenges/challenges.view.html',
+                templateUrl: 'src/components/challenges/challenges.view.html'
             }).
             when('/users', {
-                templateUrl: 'src/components/users/users.view.html',
+                templateUrl: 'src/components/users/users.view.html'
             }).
             when('/profile/:profileId', {
-                templateUrl: 'src/components/profile/profile.view.html',
+                templateUrl: 'src/components/profile/profile.view.html'
             }).
             otherwise({
                 redirectTo: '/home'
