@@ -1,7 +1,0 @@
-<div ng-controller="challengesCtrl">
-    <!-- filter bar -->
-    <ng-include src="'app/shared/filterbar/filterbar.view.html'"></ng-include>
-    <!-- challenges -->
-    <challenge ng-repeat="challenge in challenges | filter : searchFor | orderBy : sortBy : reverseOrder"
-               challenge="challenge" on-server-response="refresh()"></challenge>
-</div>

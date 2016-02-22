@@ -50,3 +50,4 @@ fabric.properties
 
 # Grunt
 node_modules/*
+bower_components/*

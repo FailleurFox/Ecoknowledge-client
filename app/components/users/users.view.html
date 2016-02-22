@@ -1,6 +1,0 @@
-<div ng-controller="usersCtrl">
-    <!-- filter bar -->
-    <ng-include src="'app/shared/filterbar/filterbar.view.html'"></ng-include>
-    <!-- users -->
-    <user ng-repeat="user in users | filter : searchFor | orderBy : sortBy : reverseOrder" user="user"></user>
-</div>

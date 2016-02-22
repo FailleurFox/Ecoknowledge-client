@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ecoknowledge</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/badge.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="ecoknowledgeApp">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<!-- navbar -->
+<ng-include src="'src/components/navbar/navbar.view.html'"></ng-include>
+
+<!-- content -->
+<div ng-view class="content"></div>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    !function (A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+<!-- modules -->
+<script src="src/app.mdl.js"></script>
+<script src="src/components/navbar/navbar.mdl.js"></script>
+<script src="src/components/home/home.mdl.js"></script>
+<script src="src/components/challenges/challenges.mdl.js"></script>
+<script src="src/shared/challenge/challenge.mdl.js"></script>
+<script src="src/shared/badge/badge.mdl.js"></script>
+<script src="src/components/users/users.mdl.js"></script>
+<script src="src/shared/user/user.mdl.js"></script>
+<script src="src/components/profile/profile.mdl.js"></script>
+<script src="src/shared/authentication/authentication.mdl.js"></script>
+<script src="src/shared/registration/registration.mdl.js"></script>
+
+<!-- controllers -->
+<script src="src/components/navbar/navbar.ctrl.js"></script>
+<script src="src/components/home/home.ctrl.js"></script>
+<script src="src/components/challenges/challenges.ctrl.js"></script>
+<script src="src/shared/challenge/challenge.modal.ctrl.js"></script>
+<script src="src/components/users/users.ctrl.js"></script>
+<script src="src/components/profile/profile.ctrl.js"></script>
+<script src="src/shared/authentication/authentication.ctrl.js"></script>
+<script src="src/shared/authentication/authentication.modal.ctrl.js"></script>
+<script src="src/shared/registration/registration.ctrl.js"></script>
+
+<!-- directives -->
+<script src="src/shared/challenge/challenge.dir.js"></script>
+<script src="src/shared/badge/badge.dir.js"></script>
+<script src="src/shared/user/user.dir.js"></script>
+
+<!-- services -->
+<script src="src/shared/authentication/authentication.serv.js"></script>
+<!-- endbuild -->
+</body>
+</html>
