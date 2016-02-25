@@ -1,7 +1,7 @@
 /**
  * Users page controller
  */
-usersMdl.controller('usersCtrl', function ($scope, $http) {
+usersMdl.controller('usersCtrl', function ($rootScope, $scope, $http) {
     // filter bar variables
     $scope.sortOptions = {
         'nom': 'lastName',
@@ -10,8 +10,7 @@ usersMdl.controller('usersCtrl', function ($scope, $http) {
     };
     $scope.sortBy = 'lastName';
 
-    // TODO call server
-    $http({method: 'GET', url: '/stub-users.json'}).success(function(data, status, headers, config) {
+    $http({method: 'GET', url: $rootScope.serverURL + 'users'}).success(function(data, status, headers, config) {
         $scope.users = data;
     });
 });

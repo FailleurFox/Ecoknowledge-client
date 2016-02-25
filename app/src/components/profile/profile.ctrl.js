@@ -1,7 +1,7 @@
 /**
  * Profile page controller
  */
-profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
+profileMdl.controller('profileCtrl', function ($rootScope, $scope, $routeParams, $http) {
     $scope.userId = $routeParams.profileId;
 
     // category selected
@@ -39,22 +39,17 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     $scope.categorySelected();
     //*************************************************************
 
-    // TODO call server
     $http({
         method: 'GET',
-        url: '/stub-users.json'
+        url: $rootScope.serverURL + 'users/' + $scope.userId + "/profile"
     }).success(function (data, status, headers, config) {
-        for (var n in data) {
-            var user = data[n];
-            if (user.id == $scope.userId) {
-                $scope.user = user;
-                break;
-            }
-        }
+
+        $scope.user = data;
     });
     $http({
         method: 'GET',
-        url: '/stub-badges.json'
+        url: $rootScope.serverURL + 'badges',
+        params:{'userID':$scope.userId}
     }).success(function (data, status, headers, config) {
         $scope.badges = data;
 
@@ -66,8 +61,10 @@ profileMdl.controller('profileCtrl', function ($scope, $routeParams, $http) {
     });
     $http({
         method: 'GET',
-        url: '/stub-challenges.json'
+        url: $rootScope.serverURL + 'goals',
+        params:{'userID':$scope.userId}
     }).success(function (data, status, headers, config) {
+        console.log(data);
         for (var i = 0; i < data.length; i++) {
             var challenge = data[i];
             if (challenge.progressPercent) {
