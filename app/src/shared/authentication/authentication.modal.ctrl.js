@@ -1,13 +1,16 @@
 /**
  * Authentication modal controller
  */
-authenticationMdl.controller('authenticationModalCtrl', function ($scope, AuthenticationService, $uibModalInstance) {
+authenticationMdl.controller('authenticationModalCtrl', function ($rootScope, $http, $scope, AuthenticationService, $uibModalInstance) {
     // submit connection information
     $scope.onSubmit = function(){
-        // TODO call server
-        console.log($scope.mail, $scope.password);
-        AuthenticationService.connect("20d3efd3-4cf0-4dd8-9e01-6d2c223599a3");  // FIXME hardcoded userID
-
+        $http({
+            method: 'GET',
+            url: $rootScope.serverURL + 'users/' + $scope.mail,
+            params: {'password': $scope.password}
+        }).success(function (data, status, headers, config) {
+            AuthenticationService.connect(data.id);
+        });
         $uibModalInstance.close();
     };
 });

@@ -9,8 +9,7 @@ ecoknowledgeApp.factory('AuthenticationService', function($cookies){
         },
 
         getUserId : function(){
-            return "620643fd-c7a4-4d41-aed9-bfe0f7a914b1";
-            //  FIXME return $cookies.get("EcoknowledgeUserId");
+            return $cookies.get("EcoknowledgeUserId");
         },
 
         isLoggedIn : function(){
