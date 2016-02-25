@@ -2,7 +2,7 @@
  * <challenge> directive
  */
 challengeMdl
-    .directive('challenge', function ($uibModal, $http, AuthenticationService) {
+    .directive('challenge', function ($uibModal, $http, $rootScope, AuthenticationService) {
 
         return {
             templateUrl:'src/shared/challenge/challenge.view.html',
@@ -13,33 +13,18 @@ challengeMdl
                 refreshFunction: '&onServerResponse'
             },
             link: function(scope, elem, attrs) {
-                // accept challenge
+
                 scope.takeUpChallenge  = function () {
-                    // TODO take up challenge
 
-                    var userID = AuthenticationService.getUserId();
-
-                    console.log("USERID : ", userID);
-                    console.log("CHALLENGEID : ", scope.challenge.id);
-
-                    var req = {
-                        method: 'POST',
-                        url: 'http://localhost:8080/Ecoknowledge/goals',
-                        data: {
-                            challenge : scope.challenge.id,
-                            user : userID
-                        }
-                    };
-
-                    $http(req).then(function(){
-                        console.log("Goal pris sans problème ma gueule !");
-                        scope.refreshFunction();
-                        // TODO
-                    }, function(){
-                        console.log("Erreur en prenant le goal... tooo baaaad");
-                        scope.refreshFunction();
-                        // TODO
+                    $.ajaxPrefilter( "json script", function( options ) {
+                        options.crossDomain = true;
                     });
+
+                    var data ={'challenge': scope.challenge.id,
+                        'user': AuthenticationService.getUserId};
+                    $http.post($rootScope.serverURL + 'goals/', data).success(function (data, status, headers, config) {});
+
+                    scope.refreshFunction();
                 };
                 // more information on challenge
                 scope.moreInfo  = function (challenge) {

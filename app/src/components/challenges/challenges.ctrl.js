@@ -2,7 +2,7 @@
  * Challenges page controller
  */
 
-challengesMdl.controller('challengesCtrl', function ($scope, $http, $interval, AuthenticationService) {
+challengesMdl.controller('challengesCtrl', function ($scope, $rootScope, $http, $interval, AuthenticationService) {
     // filter bar variables
     $scope.sortOptions = {
         'nom': 'name',
@@ -15,16 +15,14 @@ challengesMdl.controller('challengesCtrl', function ($scope, $http, $interval, A
 
     // fill the challenges grid
     $scope.refresh = function() {
-      // TODO call server
-      $http({method: 'GET', url: '/stub-challenges.json'}).success(function(data, status, headers, config) {
-        $scope.challenges = data;
-      });
-      /*$http({
-          method: 'GET',
-          url: $scope.serverURL + 'mosaic?userID=' + AuthenticationService.getUserId()
-      }).success(function (data, status, headers, config) {
-          $scope.challenges = data;
-      });*/
+
+        $http({
+            method: 'GET',
+            url: $rootScope.serverURL + 'challenges/',
+            params: {'type': 'notTaken', 'userID': AuthenticationService.getUserId()}
+        }).success(function (data, status, headers, config) {
+            $scope.challenges = data;
+        });
     };
 
     $scope.refresh();
