@@ -1,35 +1,63 @@
 <form accept-charset="UTF-8" role="form" method="post" ng-submit="onSubmit()" ng-controller="registrationCtrl">
-    <!-- title -->
-    <h4 style="text-align: center">
-        Inscription
-    </h4>
-    <fieldset>
-        <!-- first name -->
-        <div class="form-group input-group" style="width:100%">
-            <input class="form-control" placeholder="Prénom" ng-model="firstName" style="border-radius: 4px"
-                   required="">
-        </div>
-        <!-- last name -->
-        <div class="form-group input-group" style="width:100%">
-            <input class="form-control" placeholder="Nom" ng-model="lastName" style="border-radius: 4px"
-                   required="">
-        </div>
-        <!-- mail -->
-        <div class="form-group input-group" style="width:100%">
-            <input class="form-control" placeholder="Email" ng-model="mail" type="email" style="border-radius: 4px"
-                   required="">
-        </div>
-        <!-- password -->
-        <div class="form-group input-group" style="width:100%">
-            <input class="form-control" placeholder="Mot de passe" ng-model="password" type="password"
-                   style="border-radius: 4px" value=""
-                   required="">
-        </div>
-        <div class="form-group">
-            <!-- submit -->
-            <button type="submit" class="btn btn-primary btn-block">
-                S'inscrire
-            </button>
-        </div>
-    </fieldset>
+  <!-- title -->
+  <h4 style="text-align: center">
+    Inscription
+  </h4>
+  <fieldset>
+    <div class="form-group row">
+      <!-- first name -->
+      <div class="col-xs-6">
+        <input class="form-control" placeholder="Prénom" ng-model="firstName" style="border-radius: 4px"
+               required="">
+      </div>
+      <!-- last name -->
+      <div class="col-xs-6">
+        <input class="form-control" placeholder="Nom" ng-model="lastName" style="border-radius: 4px"
+               required="">
+      </div>
+    </div>
+    <!-- mail -->
+    <div class="form-group input-group" style="width:100%">
+      <input class="form-control" placeholder="Email" ng-model="mail" type="email" style="border-radius: 4px"
+             required="">
+    </div>
+    <!-- password -->
+    <div class="form-group input-group" style="width:100%">
+      <input class="form-control" placeholder="Mot de passe" ng-model="password" type="password"
+             style="border-radius: 4px" value=""
+             required="">
+    </div>
+    <!-- confirm password -->
+    <div class="form-group input-group" style="width:100%">
+      <input class="form-control" placeholder="Confirmation du mot de passe" ng-model="confirmPassword" type="password"
+             style="border-radius: 4px" ng-style="(confirmPassword != password) && {'border-color':'red'}" value=""
+             required="">
+    </div>
+    <hr>
+    <!-- captors -->
+    <div class="form-group row" ng-repeat="captor in captors">
+      <!-- symbolic name -->
+      <div class="col-xs-5">
+        <select class="form-control" ng-model="captor.type" ng-options="o as o for o in captorTypes" required></select>
+      </div>
+      <!-- identificator -->
+      <div class="col-xs-5">
+        <input type="text" class="form-control" ng-model="captor.name" id="inputValue" placeholder="ID" required>
+      </div>
+      <!-- remove the captor -->
+      <div class="col-xs-2">
+        <span class="modal-close-icon" ng-click="removeCaptor($index)" style="font-size:large">&times;</span>
+      </div>
+    </div>
+    <!-- add captor -->
+    <button type="button" class="btn btn-default col-xs-12" style="margin-bottom:20px" ng-click="addCaptor()">+
+      capteur
+    </button>
+    <div class="form-group">
+      <!-- submit -->
+      <button type="submit" class="btn btn-primary btn-block">
+        S'inscrire
+      </button>
+    </div>
+  </fieldset>
 </form>
