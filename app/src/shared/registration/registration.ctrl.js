@@ -13,15 +13,19 @@ registrationMdl.controller('registrationCtrl', function ($rootScope, $http, $sco
       options.crossDomain = true;
     });
 
-    // TODO add real mapping
+    var finalCaptors = {};
+    for(var index in $scope.captors){
+      var captor = $scope.captors[index];
+      finalCaptors[captor.type] = captor.name;
+    }
+
     var data = {
       "firstName": $scope.firstName,
       "lastName": $scope.lastName,
       "mail": $scope.mail,
       "password": $scope.password,
-      "symbolicNameToSensorNameMap": {}
+      "symbolicNameToSensorNameMap": finalCaptors
     };
-
     $http.post($rootScope.serverURL + 'users', data).success(function (data, status, headers, config) {
       AuthenticationService.connect(data.id);
     });
