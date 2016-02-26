@@ -2,8 +2,8 @@
  * Registration component controller
  */
 registrationMdl.controller('registrationCtrl', function ($rootScope, $http, $scope, AuthenticationService) {
-  $scope.captorTypes = ['TMP_CLIM', 'TMP_AMB', 'SWITCH_LIGHT', 'SWITCH_DOOR'];
-  $scope.captors = [];
+  $scope.sensorTypes = ['TMP_CLIM', 'TMP_AMB', 'SWITCH_LIGHT', 'SWITCH_DOOR'];
+  $scope.sensors = [];
 
   // submit registration information
   $scope.onSubmit = function () {
@@ -13,10 +13,10 @@ registrationMdl.controller('registrationCtrl', function ($rootScope, $http, $sco
       options.crossDomain = true;
     });
 
-    var finalCaptors = {};
-    for(var index in $scope.captors){
-      var captor = $scope.captors[index];
-      finalCaptors[captor.type] = captor.name;
+    var finalSensors = {};
+    for(var index in $scope.sensors){
+      var sensor = $scope.sensors[index];
+      finalSensors[sensor.type] = sensor.name;
     }
 
     var data = {
@@ -24,18 +24,18 @@ registrationMdl.controller('registrationCtrl', function ($rootScope, $http, $sco
       "lastName": $scope.lastName,
       "mail": $scope.mail,
       "password": $scope.password,
-      "symbolicNameToSensorNameMap": finalCaptors
+      "symbolicNameToSensorNameMap": finalSensors
     };
     $http.post($rootScope.serverURL + 'users', data).success(function (data, status, headers, config) {
       AuthenticationService.connect(data.id);
     });
   };
 
-  $scope.addCaptor = function () {
-    $scope.captors.push({'type': $scope.captorTypes[0], 'name': undefined});
+  $scope.addSensor = function () {
+    $scope.sensors.push({'type': $scope.sensorTypes[0], 'name': undefined});
   };
 
-  $scope.removeCaptor = function (id) {
-    $scope.captors.splice(id, 1);
+  $scope.removeSensor = function (id) {
+    $scope.sensors.splice(id, 1);
   }
 });

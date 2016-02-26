@@ -34,23 +34,23 @@
              required="">
     </div>
     <hr>
-    <!-- captors -->
-    <div class="form-group row" ng-repeat="captor in captors">
+    <!-- sensors -->
+    <div class="form-group row" ng-repeat="sensor in sensors">
       <!-- symbolic name -->
       <div class="col-xs-5">
-        <select class="form-control" ng-model="captor.type" ng-options="o as o for o in captorTypes" required></select>
+        <select class="form-control" ng-model="sensor.type" ng-options="o as o for o in sensorTypes" required></select>
       </div>
       <!-- identificator -->
       <div class="col-xs-5">
-        <input type="text" class="form-control" ng-model="captor.name" id="inputValue" placeholder="ID" required>
+        <input type="text" class="form-control" ng-model="sensor.name" id="inputValue" placeholder="ID" required>
       </div>
-      <!-- remove the captor -->
+      <!-- remove the sensor -->
       <div class="col-xs-2">
-        <span class="modal-close-icon" ng-click="removeCaptor($index)" style="font-size:large">&times;</span>
+        <span class="modal-close-icon" ng-click="removeSensor($index)" style="font-size:large">&times;</span>
       </div>
     </div>
-    <!-- add captor -->
-    <button type="button" class="btn btn-default col-xs-12" style="margin-bottom:20px" ng-click="addCaptor()">+
+    <!-- add sensor -->
+    <button type="button" class="btn btn-default col-xs-12" style="margin-bottom:20px" ng-click="addSensor()">+
       capteur
     </button>
     <div class="form-group">
