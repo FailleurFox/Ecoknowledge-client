@@ -30,7 +30,11 @@
     <!-- confirm password -->
     <div class="form-group input-group" style="width:100%">
       <input class="form-control" placeholder="Confirmation du mot de passe" ng-model="confirmPassword" type="password"
-             style="border-radius: 4px" ng-style="(confirmPassword != password) && {'border-color':'red'}" value=""
+             style="border-radius: 4px"
+             ng-style="(confirmPassword != password) && {'border-color':'red',
+             'box-shadow': '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red',
+             'outline': '0 none'}"
+             value=""
              required="">
     </div>
     <hr>
