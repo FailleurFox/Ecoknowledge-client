@@ -36,7 +36,7 @@
                             <p style="margin-bottom: 0">
                                 Durée : <span class="important">{{challenge.length}}</span><span
                                     ng-show="challenge.remaining!=null">&nbsp;(temps restant : <span
-                                    class="important">{{challenge.remaining}}</span>)</span>
+                                    class="important">{{challenge.remaining/1000|prettytime:false:true:false:'duration'}}</span>)</span>
                             </p>
 
                             <!-- time bar -->

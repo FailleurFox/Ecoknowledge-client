@@ -11,11 +11,12 @@ var ecoknowledgeApp = angular.module('ecoknowledgeApp', [
     'challengeMdl',
     'userMdl',
     'ngCookies',
-    'badgeMdl'
+    'badgeMdl',
+    'fs-angular-prettytime'
 ])
     //iInitializing rootScope
     .run(function ($rootScope) {
-        $rootScope.serverURL = "http://localhost:8080/Ecoknowledge/";
+        $rootScope.serverURL = "http://localhost:8081/Ecoknowledge/";
     })
 
     // routing
