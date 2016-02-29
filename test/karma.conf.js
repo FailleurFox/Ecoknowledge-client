@@ -26,6 +26,8 @@ module.exports = function(config) {
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/fs-pluralize/pluralize.js',
+      'bower_components/fs-angular-prettytime/dist/prettytime.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -21,7 +21,7 @@ challengeMdl
                     });
 
                     var data ={'challenge': scope.challenge.id,
-                        'user': AuthenticationService.getUserId};
+                        'user': AuthenticationService.getUserId()};
                     $http.post($rootScope.serverURL + 'goals/', data).success(function (data, status, headers, config) {});
 
                     scope.refreshFunction();

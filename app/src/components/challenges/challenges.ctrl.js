@@ -16,13 +16,21 @@ challengesMdl.controller('challengesCtrl', function ($scope, $rootScope, $http, 
     // fill the challenges grid
     $scope.refresh = function() {
 
-        $http({
-            method: 'GET',
-            url: $rootScope.serverURL + 'challenges/',
-            params: {'type': 'notTaken', 'userID': AuthenticationService.getUserId()}
-        }).success(function (data, status, headers, config) {
-            $scope.challenges = data;
-        });
+      $scope.challenges = [];
+      $http({
+        method: 'GET',
+        url: $rootScope.serverURL + 'challenges/',
+        params: {'type': 'notTaken', 'userID': AuthenticationService.getUserId()}
+      }).success(function (data, status, headers, config) {
+        $scope.challenges = $scope.challenges.concat(data);
+      });
+      $http({
+        method: 'GET',
+        url: $rootScope.serverURL + 'goals/',
+        params: {'userID': AuthenticationService.getUserId()}
+      }).success(function (data, status, headers, config) {
+        $scope.challenges = $scope.challenges.concat(data);
+      });
     };
 
     $scope.refresh();
