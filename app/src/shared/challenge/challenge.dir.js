@@ -13,6 +13,7 @@ challengeMdl
                 refreshFunction: '&onServerResponse'
             },
             link: function(scope, elem, attrs) {
+              scope.trunc = Math.trunc;
 
                 scope.takeUpChallenge  = function () {
 

@@ -2,6 +2,7 @@
  * Challenge modal controller
  */
 challengeMdl.controller('challengeModalCtrl', function ($scope, $http, $rootScope, $uibModalInstance, challenge, refreshFunction, AuthenticationService) {
+  $scope.trunc = Math.trunc;
     $scope.challenge = challenge;
 
     $scope.isLoggedIn = AuthenticationService.isLoggedIn;

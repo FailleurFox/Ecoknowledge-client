@@ -43,7 +43,7 @@
                             <uib-progressbar style="margin-bottom: 0; margin-top:10px"
                                              ng-show="challenge.timePercent>=0" max="100"
                                              value="challenge.timePercent" type="info"><span
-                                    class="glyphicon glyphicon-time"></span>&nbsp{{challenge.timePercent}}%
+                                    class="glyphicon glyphicon-time"></span>&nbsp{{trunc(challenge.timePercent)}}%
                             </uib-progressbar>
 
                             <!-- progress bar -->
@@ -51,7 +51,7 @@
                                              ng-show="challenge.progressPercent>=0" max="100"
                                              value="challenge.progressPercent"
                                              type="{{challenge.progressPercent == 100 ? 'success' : ''}}"><span
-                                    class="glyphicon glyphicon-tasks"></span>&nbsp{{challenge.progressPercent}}%
+                                    class="glyphicon glyphicon-tasks"></span>&nbsp{{trunc(challenge.progressPercent)}}%
                             </uib-progressbar>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                                      ng-show="level.percent>=0" max="100"
                                      value="level.percent" type="{{level.percent == 100 ? 'success' : ''}}">
                         <span
-                                class="glyphicon glyphicon-tasks"></span>&nbsp;{{level.percent}}%
+                                class="glyphicon glyphicon-tasks"></span>&nbsp;{{trunc(level.percent)}}%
                     </uib-progressbar>
 
                     <!-- conditions -->
